@@ -1,296 +1,374 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
+	<meta http-equiv="Content-Type">
+	<meta content="text/html">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Ten-X</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<link rel="stylesheet" type="text/css" href="index-rwd.css" />
+<link rel="icon" href="favicon4.ico" />
+<script type="text/javascript" src="index_c.js"></script>
+<script src="jquery-min.js"></script>	
+<script type="text/javascript">
 
-    <title>YiChun Sung</title>
-    <link rel="icon" href="favicon4.ico" />
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+	$(document).ready(function(){
+		$('.logo-nav').on('click', function(){
+			$('html, body').animate({
+				scrollTop: 0
+			}, 700);
+		});
+	});
 
-    <!-- Custom Fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+	$(document).ready(function(){
+		$("#aboutButton").on('click', function() {
+	      $('html, body').animate({
+	        scrollTop: $('#h1').offset().top
+	      }, 700);
+	    });
+	});
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/creative.css" type="text/css">
+	$(document).ready(function(){
+		$(".start-button").on('click', function() {  		 
+	      $('html, body').animate({
+	        scrollTop: $('#h1').offset().top
+	      }, 600);
+	    });
+	});
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-<style>
-#img {
-    opacity: 0.4;
-    filter: alpha(opacity=40); /* For IE8 and earlier */
+	$(document).ready(function(){
+		$("#projectButton").on('click', function(){
+			$('html, body').animate({
+				scrollTop: $('#h2').offset().top
+			}, 600);
+		});
+	});
+		
+	$(document).ready(function(){
+		$("#funnyButton").on('click', function(){
+			$('html, body').animate({
+				scrollTop: $('#h3').offset().top
+			}, 600);
+		});
+	});
+
+	$(document).ready(function(){
+		$('#contactButton').on('click', function(){
+			$('html, body').animate({
+				scrollTop: $('#h4').offset().top
+			}, 800);
+		});
+	});
+
+	$(document).ready(function(){
+		$("#about-1-d").on('mouseover', function(){
+			$('#about-1-d').stop().animate({
+				width:"120px",
+				height:"120px"
+			}, 600);
+		}).on('mouseout', function(){
+			$('#about-1-d').stop().animate({
+				width:"100px",
+				height:"100px"
+			}, 600);
+		});
+	});
+	
+
+</script>
+
+<script type="text/javascript">
+	//Select Bar
+var SelectXJ;
+var SelectHK;
+var SelectTokyo;
+var tokyolayer2;
+var HKlayer2;
+var XJlayer2;
+window.onload = function() {
+	SelectXJ = document.getElementById('SelectXJ');
+	SelectHK = document.getElementById('SelectHK');
+	SelectTokyo = document.getElementById('SelectTokyo');
+	tokyolayer2 = document.getElementById('tokyolayer2');
+	HKlayer2 = document.getElementById('HKlayer2');
+	XJlayer2 = document.getElementById('XJlayer2');
+	SelectTokyo.addEventListener("mouseover", function() {
+		tokyolayer2.style.opacity = "0.9";
+	});
+	SelectTokyo.addEventListener("mouseout", function() {
+		tokyolayer2.style.opacity = "0";
+	});
+	SelectHK.addEventListener("mouseover", function() {
+		HKlayer2.style.opacity = "0.9";
+	});
+	SelectHK.addEventListener("mouseout", function() {
+		HKlayer2.style.opacity = "0";
+	});
+	SelectXJ.addEventListener("mouseover", function() {
+		XJlayer2.style.opacity = "0.9";
+	});
+	SelectXJ.addEventListener("mouseout", function() {
+		XJlayer2.style.opacity = "0";
+	});
 }
 
-#img:hover {
-    opacity: 1.0;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
-}
-</style>
+
+</script>
+
 </head>
 
-<body id="page-top">
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Y.C. SUNG</a>
-            </div>
+<body style="margin:0">
+<!--Head-->
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
+<!--PC-Head-->
+<div class="nav-pc">
+	<div class="nav-frame">
+		<div class="nav-left">
+			<a href="#top"><div class="logo-nav">TeN-X</div></a>
+		</div>
+			
+			<div class="list-frame">
+				<a href="#h1" id="aboutButton"><div class="list" >About</div></a>
+				<a href="#h2" id="projectButton"><div class="list">Project</div></a>
+				<a href="#h3" id="funnyButton"><div class="list">Toys</div></a>
+				<a href="#h4" id="contactButton"><div class="list">Contact</div></a>
+			</div>			
+		</div>
+		<!--修正排版中背景問題-->
+		<div style="clear:both"></div>
+</div>
 
-    <header>
-        <div class="header-content">
-            <div class="header-content-inner">
-                <h1 style = "color:#5900b3">YiChun Sung</h1>
-                <hr style ="color:#00b8e6; background-color:#00b8e6;">
-				<!--	<div style="margin-right: 1000px;"><img id="img" src="img/pof.png" style="width:304px;height:228px;">
-					</div>-->
-                <p style ="color:#000000;"><b>Let's playing for PHP, MySQL, R Script and Biogeochemistry!</b></p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll" style="background-color:rgb(146, 168, 209);">Find Out More</a>
-            </div>
-        </div>
-    </header>
+<!--cell phone head-->
+<div class="nav-mobile">
+	<div class="mobile-menu-frame">
+		<div class="mobile-menu-frame-left">
+			<span style="font-weight:bold;">TeN-X</span>
+		</div>
+		<div class="mobile-menu-frame-right">
+			<span>menu</span>
+		</div>
+			<div style="clear:both"></div>
+	</div>
 
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading" style="color:#2e2eb8;">We've got what you need!</h2>
-                    <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="btn btn-default btn-xl page-scroll" style="background-color:#F2DDDE; color:#3333cc;">Get Started!</a>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About My Work</h2>
-                    <hr class="primary">
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-bomb wow rubberBand text-primary"></i>
-                        <h3>Playing</h3>
-                        <p class="text-muted">Just playing.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow rubberBand text-primary" data-wow-delay=".1s"></i>
-                        <h3>Work</h3>
-                        <p class="text-muted">Working everywhere</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow rubberBand text-primary" data-wow-delay=".2s"></i>
-                        <h3>Biogeochemistry</h3>
-                        <p class="text-muted">Geogly, Earth Science</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow rubberBand text-primary" data-wow-delay=".3s"></i>
-                        <h3>Baseball</h3>
-                        <p class="text-muted">Play Ball!!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-			<!--R Script plotly TEST-->
-                <div class="col-lg-4 col-sm-6">
-                    <a href="1.html" class="portfolio-box">
-                        <img src="img/portfolio/plotly_test.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    R Script test
-                                </div>
-                                <div class="project-name">
-                                    <b style="color:#000000">plotly</b>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="hk.html" class="portfolio-box">
-                        <img src="img/portfolio/hk.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Travel Map
-                                </div>
-                                <div class="project-name">
-                                    <b style="color:#000000">Hong Kong Map</b>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="hkfood.html" class="portfolio-box">
-                        <img src="img/portfolio/hkfood.jpeg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Hong Kong Food
-                                </div>
-                                <div class="project-name">
-                                    <b style="color:#000000">Food Map!</b>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    <b style="color:#000000">Project Name</b>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    <b style="color:#000000">Project Name</b>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    <b style="color:#000000">Project Name</b>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
-        </div>
-    </aside>
+<!--Section I Banner-->
 
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
-                    <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com" style="color:#00a3cc;">cd12631@gmail.com</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="banner">
+	<div class="banner-frame">
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+				<!--↓↓↓↓↓排版用↓↓↓↓↓-->
+		<div class="design-web-body-01"></div>
+				<!--↑↑↑↑↑排版用↑↑↑↑↑-->
+		<div class="logo">T<span style="color:#a64dff;">e</span>N-X<br /></div>
+		<div class="logo-small">Working for asshole!</div>
+				<!--↓↓↓↓↓排版用↓↓↓↓↓-->
+		<div class="design-web-body-02"></div>
+				<!--↑↑↑↑↑排版用↑↑↑↑↑-->
+		<a href="#h1" >
+			<div class="start-button">START<br />▼</div>
+		</a>
+		<!--修正排版中背景問題-->
+		<div style="clear:both"></div>
+	</div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+</div>
 
-    <!-- Plugin JavaScript -->
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/jquery.fittext.js"></script>
-    <script src="js/wow.min.js"></script>
+<!--Section II About -->
+<div class="aboutSection">
+	<div class="section-frame">
+		<div id="h1" class="design0"></div>
+			<h1 class="title-sec">About</h1>
+			<hr />
+			<div style = "width:1000px;">
+				<div id="about-1-d"
+				style = "width: 100px; height: 100px; 
+						background-image:url('globe.png');background-size:cover; background-repeat: no-repeat; margin-left: 450px;  margin-top: 30px;
+							border-radius: 100px; 
+							float: left;
+						"
+				>
+					
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/creative.js"></script>
+				</div>
+				<div style="width:70px; border:1px solid #ffffff; float: left; margin-top:80px; margin-left: 5px; "></div>
+				<div style = "float: left; margin-top: 70px; margin-left: 10px; margin-right: 180px; color: #ffffff; font-size: 18px">I started in 2016 JAN!</div>
+				<div style = "width:0px ; height: 100px; border: 1px solid #ffffff; float: left; margin-top: 2px; margin-left: 500px; margin-right: 500px;"></div>
+				<div style="float: left; margin-left: 430px; margin-top: 2px; width: 140px; height: 140px; background-image: url('takeoff.png'); background-size: cover; background-repeat: no-repeat; border-radius: 100px;"></div>
+				<div style="width:80px; border:1px solid #ffffff; float: left; margin-top:80px; margin-left: 5px; "></div>
+				<div style = "color:#ffffff ; float: left; margin-top: 70px; margin-left: 10px;">Add the R project.</div>
+								
+				
+					
+			</div>
+			<div style="clear:both"></div>
+		</div>
+
+	<!--修正排版中背景問題-->
+	<div style="clear:both"></div>
+	</div>
+
+
+
+<!--Section III Project -->
+
+<div class="projectSection">
+	<div class="section-frame">
+		<div id="h2" class="design0"></div>
+			<h1 style="color: #a64dff; font-size: 64px;">Project</h1>
+			<hr />
+			<div class="project-left">			
+				<img src="test.png" class="show-img">
+			</div>
+			<div class="project-right">
+				<h2 style = "margin-left:10px; color: #0066ff; font-size: 30px;">CH4 concentration</h2>
+				<p style = "margin-left:10px; color:#0066ff; font-size: 20px;">
+					We Use R Script to figure How much concentration of Methane.
+				</p>
+			</div>
+			<div style="clear:both"></div>
+		</div>
+
+	<!--修正排版中背景問題-->
+	<div style="clear:both"></div>
+	</div>
+
+
+
+<!--Section IV Funny -->
+
+<div class="projectSection">
+	<div class="section-frame">
+		<div id="h3" class="design0"></div>
+			<h1 class="title-sec">Toys</h1>
+			<hr />
+			<div class="select-bar-frame">
+				<div class="select-bar" id="SelectTokyo">
+					<div 
+						class="select-div-layer1" 
+						style="background-image: url('tokyo.jpg');">		
+					</div>
+					<div class = "select-div-layer2" id = "tokyolayer2">
+						<div class = "select-font">
+							Tokyo
+						</div>
+					</div>
+				</div>
+				<div class="select-bar" id="SelectHK">
+					<div 
+						class="select-div-layer1" 
+						style="background-image: url('sec1.jpg');">	
+					</div>
+					<div class = "select-div-layer2" id = "HKlayer2">
+						<div class = "select-font">
+							Hong Kong
+						</div>
+					</div>
+				</div>
+				<div class="select-bar" id="SelectXJ">
+					<div 
+						class="select-div-layer1" 
+						style="background-image: url('XJ.jpg');">	
+					</div>
+					<div class="select-div-layer2" id = "XJlayer2">
+						<div class = "select-font">
+							Xinjiang
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="width:100px; height: 20px;"></div>
+			<!--<div style="margin-left: 20px; opacity: 0.8;"><img src="sec1.jpg"></div>-->
+			
+	</div>
+
+	<!--修正排版中背景問題-->
+	<div style="clear:both"></div>
+
+</div>
+
+<!--Contact Section-->
+
+<div class = "contact-section">
+	<div class="section-frame">
+		<div id="h4" style="width:1000px; float:left;">
+			<h1 class="title-sec">
+			Contact
+			</h1>
+			<hr />
+		</div>
+		
+		<div class="contact-sec-left">
+			<!--
+			<ul class="contact-ul">
+				<li id="github-contact" class="contact-li-active" onclick="changeToGithub();">
+					<a href="#github">GitHub</a>
+			  	</li>
+			  	<li id="email-contact" class="contact-li" onclick="changeToEmail();">
+			  		<a href="#email">Email</a>
+			  	</li>
+			  	<li id="address-contact" class="contact-li" onclick="changeToAddress();">
+			  		<a href="#address">Address</a>
+			  	</li>
+  
+			</ul>
+
+		</div>
+
+		-->
+			
+				<a href="https://github.com/yichunsung" id="contactLink">
+					<img src="github-icon.png" 
+							id="contact-img" 
+								class="contact-icon">
+					<br />
+					<div class="contact-text" id="contact-text">
+						View My GitHub!
+					</div>
+				</a>
+			</div>
+		
+
+
+		<div class = "contact-sec-center">
+		<a href="https://github.com/yichunsung" id="contactLink">
+			<img src="mail-icon.png" 
+				id="contact-img" 
+				class="contact-icon">
+			<br />
+			<div class="contact-text" id="contact-text">
+				Send Email to me!
+			</div>
+		</a>
+		</div>
+
+		<div class = "contact-sec-right">
+		<a href="https://github.com/yichunsung" id="contactLink">
+			<img src="address-icon.png" 
+				id="contact-img" 
+				class="contact-icon">
+			<br />
+			<div class="contact-text" id="contact-text">
+				To Know Where I am!
+			</div>
+		</a>
+		</div>
+		<div style="clear:both"></div>
+	</div>
+
+</div>
+
+
+
 
 </body>
+
+
 
 </html>

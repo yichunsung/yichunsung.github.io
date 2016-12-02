@@ -1,0 +1,468 @@
+/* ====================================================
+=						Head nav 					  =
+=======================================================*/
+
+/*---------------Desktop menu frame-----------*/
+.nav-pc{
+	position:fixed;
+	z-index: +10;
+	top:0;
+	width:100%;
+	background-color: #333;
+	opacity:1;
+	
+}
+.nav-frame{
+	/*width:1000px;*/   /*想讓他占據整個螢幕*/
+	margin-left:cover;
+	margin-right:cover;
+	padding:5px;
+}
+.nav-left{
+	width:500px;
+	float:left;
+	padding-bottom:2px;
+	font-weight:900;
+	
+}
+
+.nav-right{
+	
+	float:right;
+	
+}
+
+/*---------------phone menu frame----------*/
+.nav-mobile{
+	
+	display:none;
+	width:100%;
+	background-color:#cccccc;
+	top:0;
+}
+.nav-mobile-frame{
+	/*width:320px;*/
+	
+	margin-left:auto;
+	margin-right:auto;
+
+}
+
+.mobile-menu-frame-left{
+	width:150px;
+	float:left;
+	
+}
+.mobile-menu-frame-right{
+	width:150px;
+	float:right;
+}
+/*---------------Nav-----------*/
+
+
+.list-frame{
+	float: right; 
+	margin: 0;
+}
+
+.list{
+	float: left;
+	margin: 0;
+	padding: 5px;
+	font-size: 23px;
+	color: white;
+	border: 0px;
+	color: #a64dff;
+
+}
+.list:hover{
+	background-color: #a64dff;
+	border: 0px;
+	color: #ffffff;
+}
+
+.logo-nav{
+	font-size:24px; 
+	opacity:1; 
+	color:#a64dff; 
+	padding:5px;
+}
+
+
+/* ====================================================
+=					Banner		  					  =
+=======================================================*/
+
+/* Frame */
+
+.banner{
+	width:100%;
+	/*background-color:#b3ccff;*/
+	background-image:url('index1.jpg');
+	background-size:cover;
+}
+.banner-frame{
+	width:1000px; 
+	height:900px;
+	margin-left:auto;
+	margin-right:auto;
+	
+}
+
+/* Logo & button */
+
+.logo{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:98px;
+	font-weight:900;	
+}
+.logo-small{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:24px;
+	font-weight:bold;
+}
+.start-button{
+	margin-left:auto; 
+	margin-right:auto; 
+	margin-bottom:200px;		
+	width:60px; 
+	height:30px; 
+	border-radius:40px;
+	border:2px solid;
+	text-align:center;
+	padding:15px 0;	
+	color:#cccccc;
+	
+}
+.start-button:hover{
+	color: black;
+	background-color:#a64dff;
+	opacity:0.5;	
+}
+
+
+/* ====================================================
+=					Section     					  =
+=======================================================*/
+.aboutSection{
+	width: 100%;
+    top: 0;
+    background: #a64dff; 
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(+72deg, black , #333); 
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(+72deg, #333 , rgb(250, 249, 245)); 
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(+72deg, black , #333); 
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(+72deg, black , #333); 
+    /* Standard syntax (must be last) */
+}
+.projectSection{
+	width:100%;
+	background: url('IMA1.jpg') no-repeat center fixed;
+	background-size: cover;
+	
+}
+.project-left{
+	width:500px;
+	float: left;
+
+}
+.project-right{
+	width: 500px;
+	float: left;
+
+}
+.funnySection{
+	width:100%;
+	background-color: #333;
+	
+}
+
+.section-frame{
+	width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+}	
+
+/* Title CSS */
+.title-sec { 
+	text-shadow: 2px 2px 4px #4d4d4d;
+	color: #a64dff;
+	font-size: 60px;
+}
+
+.rwd-img-sec1{
+	z-index: 0;
+	margin-left:5px;
+	background-image:url('sec2.jpg'); 
+	background-repeat:no-repeat;
+	background-size: cover;
+	width: 400px;
+	height: 300px;
+}
+.select-bar-frame{
+	width: 1000px;
+	display: inline-block;
+}
+.select-bar{
+	width: 330px;
+	height: 240px;
+	margin-left: 1px;
+	float: left;
+}
+.select-div-layer1{
+	width: 330px; 
+	height: 240px; 
+	position:relative;
+	display: inline-block;
+	background-size: 330px 240px;
+	margin: 0px;
+	z-index: 1;
+}
+.select-div-layer2 {
+	width: 330px; 
+	height: 240px; 
+	position:relative;
+	top:-244px;
+	background-color: #333;
+	
+	font-size: 28px;
+	opacity: 0;
+	z-index: 2;
+	transition: opacity 0.8s
+
+}
+.select-font{
+	position:relative;
+	top:100px;
+	left: 110px;
+	color: white;
+}
+
+
+.show-img{
+	width:500px;
+	border-radius: 10px;
+}
+
+
+
+/* CSS Mouseover opacity transation */
+.backGround-O{
+	display: block;
+	z-index: -5;
+	width:966px;
+	height:640px;
+	background-color:black;
+	opacity:0.3;
+
+}
+.backGround-O:hover{
+	z-index: -1;
+	opacity:1;
+
+
+}
+
+
+/* ====================================================
+=					Contact     					  =
+=======================================================*/
+
+/* frame CSS*/
+
+.contact-section{
+	width: 100%;
+    top: 0;
+    background: #a64dff; 
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(+72deg, black , #333); 
+    /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(+72deg, #333 , rgb(250, 249, 245)); 
+    /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(+72deg, black , #333); 
+    /* For Firefox 3.6 to 15 */
+    background: linear-gradient(+72deg, black , #333); 
+    /* Standard syntax (must be last) */
+
+}
+.contact-sec-left{
+	
+	width:325px;
+	float:left;
+	margin: 2px;
+	padding-bottom:2px;
+	font-weight:900;
+	
+}
+
+.contact-sec-center{
+	
+	width:325px;
+	float:left;
+	padding-bottom:2px;
+	margin: 2px;
+	
+}
+.contact-sec-right{
+	
+	width: 325px;
+	float: left;
+	padding-bottom:2px;
+	margin: 2px;
+}
+
+
+
+/* ul CSS*/
+
+.contact-ul {
+    list-style-type: none;
+    margin: 17px;
+    padding: 0;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.contact-li-active{
+	display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #00b386;
+    border-radius: 10px;
+
+}
+.contact-li  {
+    display: block;
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+}
+
+/* Change the link color on hover */
+.contact-li:hover {
+    background-color: #555;
+    color: white;
+}
+
+/* Contact Image CSS  */
+
+.contact-icon{
+	margin-top: 10px;
+	margin-left:150px; 
+	width:72px; 
+	height:72px;
+}
+.contact-text{
+	margin-left:120px; 
+	font-weight: 900;
+	color:#ffffff;
+}
+
+
+
+/* ====================================================
+=					排版	    					  =
+=======================================================*/
+
+	/* ------頁首LOGO排版區--------- */
+		.design-web-body-01{
+			width:1000px; 
+			height:260px
+		}
+		.design-web-body-02{
+			width:1000px; 
+			height:100px;
+		}
+
+	
+
+.design0{
+	height: 30px;
+	width: 1000px;
+}
+
+
+/* ----------------Link Rule---------------------------------------*/
+
+/* unvisited link */
+a:link {
+    color: black;
+	text-decoration: none;
+}
+/* visited link */
+a:visited {
+    color: black;
+	text-decoration: none;
+}
+/* mouse over link */
+a:hover {
+    color: black;
+	text-decoration: none;
+}
+/* selected link */
+a:active {
+    color: black;
+	text-decoration: none;
+}
+
+/*===============CSS3 media query===============*/
+	@media screen and (max-width:500px){
+	/*若螢幕小於500像素，套用此大括號中之設定*/
+		.nav-pc{
+			display:none;
+		}
+		.nav-mobile{
+			display:block;
+			
+			width:100%;
+			background-color:#ccccccc;
+			top:0;
+		}		
+		.banner-frame{
+			width:320px;
+		}
+		.section-frame{
+			width:320px;
+		}
+		.body-frame-2{
+			width:320px;
+		}	
+		.body-frame{
+			width:320px;
+		}
+		.rwd-img-sec1{
+			width:320px;
+			height:212px;
+			margin-left:0px;
+		
+		}
+
+	}
+
+	/*===============排版用===============*/
+
+	/* ------頁首LOGO排版區--------- */
+	.design-web-body-01{
+		width:320px; 
+		height:250px
+	}
+	.design-web-body-02{
+		width:320px; 
+		height:100px
+	}
+
+	/*--- 對超連結的設計 ---*/
+	.design-body-a{
+		width:320px; 
+		height:10px
+	}
