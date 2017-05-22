@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Index</title>
+	<link rel="stylesheet" type="text/css" href="css/index_h.css" />
+	<script type="text/javascript">		
+		window.onload = function() {
+			var StartButton = document.getElementById("StartButton");
+			var StartButtonStyleWidth = parseInt(window.getComputedStyle(StartButton).getPropertyValue("width"));
+			StartButton.addEventListener("nmouseover", function () {
+				var StartButtonStyleLeft = parseInt(window.getComputedStyle(StartButton).getPropertyValue("left"));
+				if (StartButtonStyleLeft>=600){
+					StartButton.style.width = "100px";
+				}else{
+					var StartButtonOpen = window.setInterval(function(){
+					if (StartButtonStyleWidth>=280){
+						window.clearInterval(StartButtonOpen);
+						return;
+					}
+					StartButtonStyleWidth+=10;
+					StartButton.style.width = StartButtonStyleWidth+"px";
+				}, 1);
+				}
+				
+			});
+			StartButton.addEventListener("nmouseout", function () {
+				var StartButtonClose = window.setInterval(function(){
+					if (StartButtonStyleWidth<=100){
+						window.clearInterval(StartButtonClose);
+						return;
+					}
+					StartButtonStyleWidth-=10;
+					StartButton.style.width = StartButtonStyleWidth+"px";
+				}, 1);
+			});
+		}
+		
+		function StartANDBack(){
+			/* Main Title */
+			var mainTitle = document.getElementById("mainTitle");
+			var MainTitleStyleTOP = window.getComputedStyle(mainTitle).getPropertyValue("top");
+			var MainTitleStyleTop = parseInt(MainTitleStyleTOP);
+			/* Start Button */
+			var StartButton = document.getElementById("StartButton");
+			var StartButtonStyleTOP = window.getComputedStyle(StartButton).getPropertyValue("top");
+			var StartButtonStyleTop = parseInt(StartButtonStyleTOP);
+			var StartButtonStyleLeft = parseInt(window.getComputedStyle(StartButton).getPropertyValue("left"));
+			/* Page 1  */
+			var Page1Right = document.getElementById("rightLayer2");
+			var Page1RightOpacity =parseInt(window.getComputedStyle(Page1Right).getPropertyValue("opacity"));
+			var Page1Left = document.getElementById("LeftLayer1");
+			var Page1LeftOpacity = parseInt(window.getComputedStyle(Page1Left).getPropertyValue("opacity"));
+			// if  MainTitleStyleTop <= -300 fide in or fide out
+			if (MainTitleStyleTop <= -300 && StartButtonStyleTop >= 231){
+				// Fide in Main Title
+				var fideInTitle = window.setInterval(function() {
+					if (MainTitleStyleTop >=0) {
+						window.clearInterval(fideInTitle);
+						// Move back Button
+						var fideInStartButton = window.setInterval(function(){
+						if(StartButtonStyleTop <= 0 && Page1RightOpacity <= 0){
+							window.clearInterval(fideInStartButton);
+							// Move back Start Button
+							var MoveStartButtonToRightSide =window.setInterval(function() {
+								if(StartButtonStyleLeft <= 0){
+									window.clearInterval(MoveStartButtonToRightSide);
+									return;
+								}
+								StartButtonStyleLeft-=3;
+								StartButton.style.left = StartButtonStyleLeft+"px";
+							}, 1)	
+							return;
+						}
+						StartButtonStyleTop-=3;
+						Page1RightOpacity-=0.01;
+						Page1LeftOpacity-=0.01;
+						StartButton.style.top = StartButtonStyleTop+"px";
+						Page1Right.style.opacity = Page1RightOpacity;
+						Page1Left.style.opacity = Page1LeftOpacity;
+						}, 1)
+						return;
+					}
+					MainTitleStyleTop+=4;
+					mainTitle.style.top = MainTitleStyleTop+"px";
+				}, 1)
+			}else{
+				// Fide Out Main Title
+				var fideOutTitle = window.setInterval(function(){
+				if (MainTitleStyleTop <= -50){
+					window.clearInterval(fideOutTitle);
+					// Move Start Button
+					var fideOutStartButton = window.setInterval(function(){
+						if(StartButtonStyleTop >= 231 && Page1RightOpacity >= 1){
+							window.clearInterval(fideOutStartButton);
+							// Move to Right side
+							var MoveStartButtonToRightSide =window.setInterval(function() {
+								if(StartButtonStyleLeft >= 600){
+									window.clearInterval(MoveStartButtonToRightSide);
+									return;
+								}
+								StartButtonStyleLeft+=3;
+								StartButton.style.left = StartButtonStyleLeft+"px";
+							}, 1)
+							return;
+						}
+						StartButtonStyleTop+=3;
+						Page1RightOpacity+=0.01;
+						Page1LeftOpacity+=0.01;
+						StartButton.style.top = StartButtonStyleTop+"px";
+						Page1Right.style.opacity = Page1RightOpacity;
+						Page1Left.style.opacity = Page1LeftOpacity;
+					}, 1)
+					return;	
+				}
+				MainTitleStyleTop--;
+				mainTitle.style.top = MainTitleStyleTop+"vh";
+				}, 1);
+			}
+		}
+
+
+			
+	</script>
+</head>
+<body style="margin: 0px;">
+<div class="outframe" style="background-image: url('img/IMA1.jpg');">
+	<div class="midframe">
+		<div class="inner-left-frame">
+			<div class="layer1-left" id="LeftLayer1"></div>
+			<div class="layer2-left" id="leftLayer2"></div>
+			<div class="layer3-left">
+				<div style="width: 40px; height: 40px; font-size: 24px; border: solid; border-radius: 40px"></div>
+				<div class="layer3-div-list" id=list1 >
+					CWB Data
+				</div>
+				<div id="list2" class="layer3-div-list" style="margin-top: 40px;" >
+					GIS transform
+				</div>
+				<div id="list2" class="layer3-div-list" style="margin-top: 40px;" >
+					Toys
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="inner-right-frame">
+			<div class="layer1-right"></div>
+			<div class="layer2-right" id="rightLayer2">
+				<div style="display: block;">
+					<div style="color: white;">Next</div>
+					<div class="layer2-list" style="top:30%;"><!--<span style="cursor: pointer;">--></span></div>
+					<div class="layer2-list" style="top:45%;"><!--<span style="cursor: pointer;">--></span></div>
+				</div>
+				
+			</div>
+			<div class="layer3-right">
+				<div id="mainTitle" style="opacity: 1; display: block;position: relative; top:0px;">
+					<spam style="color: white;">
+						New
+					</spam> Web
+				</div>	
+						
+				<div id="StartButton" class="StartButton" onclick="StartANDBack();" >
+					GO
+				</div>
+
+			</div>
+		</div>
+		
+	</div>
+		
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+</body>
+</html>
