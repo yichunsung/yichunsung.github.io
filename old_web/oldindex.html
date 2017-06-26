@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>New Index</title>
+	<link rel="stylesheet" type="text/css" href="css/testCSS.css" />
+	<script type="text/javascript">	
+		/*
+		var slidey={
+			mainTitle:{}
+		}
+	 	*/
+	 	
+		window.onload = function() {
+			// Main Title                       
+			mainTitle = document.getElementById("mainTitle");
+			// Start Button             
+			StartButton = document.getElementById("StartButton");
+			// Pageup and Pagedown button             
+			PageDownButton = document.getElementById("pageDown");
+			PageUpButton = document.getElementById("pageUp");
+			// a button
+			ButtonToProject = document.getElementById("ButtonToProject");
+			linkToMyProject = document.getElementById("linkToMyProject");
+			// Side List
+			SideList = document.getElementById("sideList");
+			// Page 1               
+			Page1Right = document.getElementById("rightLayer1");
+			Page1Left = document.getElementById("leftLayer1");
+			// Page 2                 
+			Page2Right = document.getElementById("rightLayer2");
+			Page2Left = document.getElementById("leftLayer2");
+			// Page 3                 
+			Page3Right = document.getElementById("rightLayer3");
+			Page3Left = document.getElementById("leftLayer3");
+		};
+		
+		function StartANDBack(){
+			/* Main Title */                      
+			var MainTitleStyleTOP = window.getComputedStyle(mainTitle).getPropertyValue("top");
+			var MainTitleStyleTop = parseInt(MainTitleStyleTOP);
+			/* Start Button */             
+			var StartButtonStyleTOP = window.getComputedStyle(StartButton).getPropertyValue("top");
+			var StartButtonStyleTop = parseInt(StartButtonStyleTOP);
+			var StartButtonStyleLeft = parseInt(window.getComputedStyle(StartButton).getPropertyValue("left"));
+			/* Page 1  */               
+			var Page1RightOpacity =parseInt(window.getComputedStyle(Page1Right).getPropertyValue("opacity"));
+			var Page1LeftOpacity = parseInt(window.getComputedStyle(Page1Left).getPropertyValue("opacity"));
+			/* Page 2  */
+			var Page2RightOpacity =parseInt(window.getComputedStyle(Page2Right).getPropertyValue("opacity"));
+		 	var Page2LeftOpacity = parseInt(window.getComputedStyle(Page2Left).getPropertyValue("opacity"));
+		 	/* Page 3  */               
+			var Page3RightOpacity =parseInt(window.getComputedStyle(Page3Right).getPropertyValue("opacity"));
+			var Page3LeftOpacity = parseInt(window.getComputedStyle(Page3Left).getPropertyValue("opacity"));
+			         
+			// if  MainTitleStyleTop <= -300 fide in or fide out
+			if (MainTitleStyleTop <= -300 && StartButtonStyleTop <= -260){
+				// Fide in Main Title
+				var fideInTitle = window.setInterval(function() {
+					if (MainTitleStyleTop >=0) {
+						window.clearInterval(fideInTitle);
+						// Move back Button
+						var fideInStartButton = window.setInterval(function(){
+						if(StartButtonStyleTop >= 0 && Page1RightOpacity <= 0){
+							window.clearInterval(fideInStartButton);
+							// Move back Start Button
+							var MoveStartButtonToZeroSide =window.setInterval(function() {
+								if(StartButtonStyleLeft >= 0){
+									window.clearInterval(MoveStartButtonToZeroSide);
+									StartButton.style.width = "90px";
+									StartButton.style.borderRadius = "0px";
+									StartButton.style.backgroundColor = "";
+									StartButton.style.opacity = "1";
+									StartButton.innerHTML = "Start"
+									return;
+								}
+								StartButtonStyleLeft+=3;
+								StartButton.style.left = StartButtonStyleLeft+"px";
+							}, 1)	
+							return;
+						}
+						StartButtonStyleTop+=4;
+						Page1RightOpacity-=0.02;
+						Page1LeftOpacity-=0.02;
+						Page2RightOpacity-=0.02;
+						Page2LeftOpacity-=0.02;
+						Page3RightOpacity-=0.02;
+						Page3LeftOpacity-=0.02;
+						StartButton.style.top = StartButtonStyleTop+"px";
+						Page1Right.style.opacity = Page1RightOpacity;
+						Page1Left.style.opacity = Page1LeftOpacity;
+						Page2Right.style.opacity = Page2RightOpacity;
+						Page2Left.style.opacity = Page2LeftOpacity;
+						Page3Right.style.opacity = Page3RightOpacity;
+						Page3Left.style.opacity = Page3LeftOpacity;
+						}, 1)
+						return;
+					}
+					// hidden Page Button
+					PageDownButton.style.display = "none"; 
+					PageUpButton.style.display = "none";
+					ButtonToProject.style.display = "none";
+					// Move the Main Title
+					MainTitleStyleTop+=4;
+					mainTitle.style.top = MainTitleStyleTop+"px";
+				}, 1)
+			}else{
+				// Fide Out Main Title
+				var fideOutTitle = window.setInterval(function(){
+				if (MainTitleStyleTop <= -50){
+					window.clearInterval(fideOutTitle);
+					// Move Start Button
+					var fideOutStartButton = window.setInterval(function(){
+						if(StartButtonStyleTop <= -260 && Page1RightOpacity >= 1){
+							window.clearInterval(fideOutStartButton);
+							// Move to Right side
+							var MoveStartButtonToRightSide =window.setInterval(function() {
+								if(StartButtonStyleLeft <= -531){
+									window.clearInterval(MoveStartButtonToRightSide);
+									StartButton.style.width = "50px";
+									StartButton.style.borderRadius = "50px";
+									StartButton.innerHTML = "";
+									StartButton.style.backgroundColor = "#5c5cd6";
+									StartButton.style.opacity = "0.6";
+									// Show Page Button
+									PageDownButton.style.display = "block"; 
+									PageUpButton.style.display = "block";
+									PageUpButton.style.left = "50vw";
+									PageDownButton.style.left = "50vw";
+									ButtonToProject.style.left = "15vw";
+									linkToMyProject.href = "https://yichunsung.shinyapps.io/TaiwanCWB/";
+									ButtonToProject.style.display = "block";
+									return;
+								}
+								StartButtonStyleLeft-=3;
+								StartButton.style.left = StartButtonStyleLeft+"px";
+							}, 1)
+							return;
+						}
+						StartButtonStyleTop-=4;
+						Page1RightOpacity+=0.02;
+						Page1LeftOpacity+=0.02;
+						StartButton.style.top = StartButtonStyleTop+"px";
+						Page1Right.style.opacity = Page1RightOpacity;
+						Page1Left.style.opacity = Page1LeftOpacity;
+					}, 1)
+					return;	
+				}
+				MainTitleStyleTop--;
+				mainTitle.style.top = MainTitleStyleTop+"vh";
+				}, 1);
+			}
+		}
+	function ChangeToNextPage() {		
+		/* Page 1  */               
+		Page1RightOpacity =parseInt(window.getComputedStyle(Page1Right).getPropertyValue("opacity"));
+		Page1LeftOpacity = parseInt(window.getComputedStyle(Page1Left).getPropertyValue("opacity"));
+		/* Page 2  */               
+		Page2RightOpacity =parseInt(window.getComputedStyle(Page2Right).getPropertyValue("opacity"));
+		Page2LeftOpacity = parseInt(window.getComputedStyle(Page2Left).getPropertyValue("opacity"));
+		/* Page 3  */               
+		Page3RightOpacity =parseInt(window.getComputedStyle(Page3Right).getPropertyValue("opacity"));
+		Page3LeftOpacity = parseInt(window.getComputedStyle(Page3Left).getPropertyValue("opacity"));
+		
+		// 1 → 2
+		if(Page1RightOpacity>=1 && Page2RightOpacity <=0 && Page3LeftOpacity <=0 ){
+			ButtonToProject.style.display = "none";
+			var changeTo2ndPage = window.setInterval(function(){
+				if (Page2RightOpacity >=1 && Page2LeftOpacity >=1){
+					window.clearInterval(changeTo2ndPage);
+					Page1Right.style.opacity = "0";
+					Page1Left.style.opacity = "0";
+					// Move Page Button
+					PageUpButtonLeft = 50;
+					PageDownButtonLeft = 50;
+					var movePageButton = window.setInterval(function(){
+						if (PageUpButtonLeft <= -35){
+							window.clearInterval(movePageButton);
+							ButtonToProject.style.left = "-15vw";
+							linkToMyProject.href = "https://yichunsung.github.io/GIS_location_transform/";
+							ButtonToProject.style.display = "block";
+							return;
+						}
+						PageUpButtonLeft-=0.5;
+						PageDownButtonLeft-=0.5;
+						PageUpButton.style.left = PageUpButtonLeft+"vw";
+						PageDownButton.style.left = PageDownButtonLeft+"vw";
+					}, 1)
+
+					
+					return;
+				}
+				Page2RightOpacity+=0.01;
+				Page2LeftOpacity+=0.01;
+				Page2Right.style.opacity = Page2RightOpacity;
+				Page2Left.style.opacity = Page2LeftOpacity;
+				
+			}, 1);
+		// 2 → 3	
+		}else if(Page1RightOpacity<=0 && Page2RightOpacity >=1 && Page3LeftOpacity <=0 ){
+			ButtonToProject.style.display = "none";
+			var changeTo3rdPage = window.setInterval(function(){
+				if (Page3RightOpacity >=1 && Page3LeftOpacity >=1){
+					window.clearInterval(changeTo3rdPage);
+					Page2Right.style.opacity = "0";
+					Page2Left.style.opacity = "0";
+					// Move Page Button
+					PageUpButtonLeft = -35;
+					PageDownButtonLeft = -35;
+					var movePageButton = window.setInterval(function(){
+						if (PageUpButtonLeft >= 50){
+							window.clearInterval(movePageButton);
+							ButtonToProject.style.left = "15vw";
+							linkToMyProject.href = "https://github.com/yichunsung/R_Application";
+							ButtonToProject.style.display = "block";
+							return;
+						}
+						PageUpButtonLeft+=0.5;
+						PageDownButtonLeft+=0.5;
+						PageUpButton.style.left = PageUpButtonLeft+"vw";
+						PageDownButton.style.left = PageDownButtonLeft+"vw";
+					}, 1)
+					return;
+			}
+				Page3RightOpacity+=0.01;
+				Page3LeftOpacity+=0.01;
+				Page3Right.style.opacity = Page3RightOpacity;
+				Page3Left.style.opacity = Page3LeftOpacity;
+			}, 1);
+		// 3 → 1
+		}else if(Page1RightOpacity<=0 && Page2RightOpacity <=0 && Page3LeftOpacity >=1 ){
+			ButtonToProject.style.display = "none";
+			Page1Right.style.opacity = "1";
+			Page1Left.style.opacity = "1";
+			var changeTo1stPage = window.setInterval(function(){
+				if (Page3RightOpacity <=0 && Page3LeftOpacity <=0){
+					window.clearInterval(changeTo1stPage);
+					linkToMyProject.href = "https://yichunsung.shinyapps.io/TaiwanCWB/";
+					ButtonToProject.style.display = "block";
+					return;
+			}
+				Page3RightOpacity-=0.01;
+				Page3LeftOpacity-=0.01;
+				//Page1RightOpacity+=0.01;
+				//Page1LeftOpacity+=0.01;
+				//Page1Right.style.opacity = Page1RightOpacity;
+				//Page1Left.style.opacity = Page1LeftOpacity;
+				Page3Right.style.opacity = Page3RightOpacity;
+				Page3Left.style.opacity = Page3LeftOpacity;
+			}, 1);
+			
+		}
+	}
+	function BackToLastPage() {		
+		/* Page 1  */               
+		 Page1RightOpacity =parseInt(window.getComputedStyle(Page1Right).getPropertyValue("opacity"));
+		 Page1LeftOpacity = parseInt(window.getComputedStyle(Page1Left).getPropertyValue("opacity"));
+		/* Page 2  */               
+		 Page2RightOpacity =parseInt(window.getComputedStyle(Page2Right).getPropertyValue("opacity"));
+		 Page2LeftOpacity = parseInt(window.getComputedStyle(Page2Left).getPropertyValue("opacity"));
+		/* Page 3  */               
+		 Page3RightOpacity =parseInt(window.getComputedStyle(Page3Right).getPropertyValue("opacity"));
+		 Page3LeftOpacity = parseInt(window.getComputedStyle(Page3Left).getPropertyValue("opacity"));
+
+		// 1 → 3
+		if(Page1RightOpacity>=1 && Page2RightOpacity <=0 && Page3LeftOpacity <=0 ){
+			ButtonToProject.style.display = "none";
+			var backTo3rdPage = window.setInterval(function(){
+				if (Page3RightOpacity >=1 && Page3LeftOpacity >=1){
+					window.clearInterval(backTo3rdPage);
+					Page1Right.style.opacity = "0";
+					Page1Left.style.opacity = "0";
+					linkToMyProject.href = "https://github.com/yichunsung/R_Application";
+					ButtonToProject.style.display = "block";
+					return;
+				}
+				Page3RightOpacity+=0.01;
+				Page3LeftOpacity+=0.01;
+				Page3Right.style.opacity = Page3RightOpacity;
+				Page3Left.style.opacity = Page3LeftOpacity;
+				
+
+		}, 1);
+		// 3 → 2
+		}else if(Page1RightOpacity<=0 && Page2RightOpacity <=0 && Page3LeftOpacity >=1 ){
+			ButtonToProject.style.display = "none";
+			Page2Right.style.opacity = "1";
+			Page2Left.style.opacity = "1";
+			var backTo2ndPage = window.setInterval(function(){
+				if (Page3RightOpacity <=0 && Page3LeftOpacity <=0){
+					window.clearInterval(backTo2ndPage);
+					// Move Page Button
+					PageUpButtonLeft = 50;
+					PageDownButtonLeft = 50;
+					var movePageButton = window.setInterval(function(){
+						if (PageUpButtonLeft <= -35){
+							window.clearInterval(movePageButton);
+							ButtonToProject.style.left = "-15vw";
+							linkToMyProject.href = "https://yichunsung.github.io/GIS_location_transform/";
+							ButtonToProject.style.display = "block";
+							return;
+						}
+						PageUpButtonLeft-=0.5;
+						PageDownButtonLeft-=0.5;
+						PageUpButton.style.left = PageUpButtonLeft+"vw";
+						PageDownButton.style.left = PageDownButtonLeft+"vw";
+					}, 1)
+					return;
+				}
+				Page3RightOpacity-=0.01;
+				Page3LeftOpacity-=0.01;
+				Page3Right.style.opacity = Page3RightOpacity;
+				Page3Left.style.opacity = Page3LeftOpacity;
+			}, 1);
+		// 2 → 1
+		}else if(Page1RightOpacity<=0 && Page2RightOpacity >=1 && Page3LeftOpacity <=0 ){
+			ButtonToProject.style.display = "none";
+			Page1Right.style.opacity = "1";
+			Page1Left.style.opacity = "1";
+			var backTo1stPage = window.setInterval(function(){
+				if (Page2RightOpacity <=0 && Page2LeftOpacity <=0){
+					window.clearInterval(backTo1stPage);
+					// Move Page Button
+					PageUpButtonLeft = -35;
+					PageDownButtonLeft = -35;
+					var movePageButton = window.setInterval(function(){
+						if (PageUpButtonLeft >= 50){
+							window.clearInterval(movePageButton);
+							ButtonToProject.style.left = "15vw";
+							linkToMyProject.href = "https://yichunsung.shinyapps.io/TaiwanCWB/";
+							ButtonToProject.style.display = "block";
+							return;
+						}
+						PageUpButtonLeft+=0.5;
+						PageDownButtonLeft+=0.5;
+						PageUpButton.style.left = PageUpButtonLeft+"vw";
+						PageDownButton.style.left = PageDownButtonLeft+"vw";
+					}, 1)				
+					return;
+				}
+				Page2RightOpacity-=0.01;
+				Page2LeftOpacity-=0.01;
+				//Page1RightOpacity+=0.01;
+				//Page1LeftOpacity+=0.01;
+				//Page1Right.style.opacity = Page1RightOpacity;
+				//Page1Left.style.opacity = Page1LeftOpacity;
+				Page2Right.style.opacity = Page2RightOpacity;
+				Page2Left.style.opacity = Page2LeftOpacity;
+			}, 1);
+			
+		}
+	}
+	function changeToAButton() {
+		var ButtonWidh = 80;
+		var animationButton = window.setInterval(function(){
+			if(ButtonWidh >= 150){
+				window.clearInterval(animationButton);
+				return;
+			}
+			ButtonWidh+=2;
+			ButtonToProject.style.width = ButtonWidh+"px";
+		}, 10)
+		
+	}
+	function BackToAButton() {
+		var ButtonWidh = 150;
+		var animationButton = window.setInterval(function(){
+			if(ButtonWidh <= 80){
+				window.clearInterval(animationButton);
+				return;
+			}
+			ButtonWidh-=2;
+			ButtonToProject.style.width = ButtonWidh+"px";
+		}, 10)
+		
+	}
+	function linkToMyProject() {
+		/* Page 1  */               
+		var Page1RightOpacity =parseInt(window.getComputedStyle(Page1Right).getPropertyValue("opacity"));
+		/* Page 2  */
+		var Page2RightOpacity =parseInt(window.getComputedStyle(Page2Right).getPropertyValue("opacity")); 	
+	 	/* Page 3  */               
+		var Page3RightOpacity =parseInt(window.getComputedStyle(Page3Right).getPropertyValue("opacity"));
+		
+
+	}
+
+			
+	</script>
+</head>
+<body style="margin: 0px;">
+<div class="outframe" style="background-image: url('img/IMA1.jpg');">
+	<div class="midframe">
+		<div class="inner-left-frame"> <!-- Left Side -->
+			<div class="layer1-left" id="leftLayer1"></div><!--Page 1-->
+			<div class="layer2-left" id="leftLayer2">
+				<div class="layerTitle">GIS transform</div>
+			</div><!--Page 2-->
+			<div class="layer3-left" id="leftLayer3"></div><!--Page 3-->
+			<div class="web-left">
+				<div style=" display:none; width: 40px; height: 40px; font-size: 24px; border: solid; border-radius: 40px"></div>
+				<div class="web-div-list" id="sideList" >
+					<div>
+						CWB Data 
+					</div>
+					<div style="margin-top: 40px;" >
+						GIS transform
+					</div>
+					<div style="margin-top: 40px;" >
+						Toys
+					</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<div class="inner-right-frame"> <!-- Right Side -->
+			<div class="layer1-right" id="rightLayer1">   <!-- Page 1 -->
+				<div class="layerTitle">CWB Data</div> 
+				
+			</div> 
+			<div class="layer2-right" id="rightLayer2">   <!-- Page 2 -->
+			</div>
+			<div class="layer3-right" id="rightLayer3">   <!-- Page 3 -->
+				<div class="layerTitle">Toys</div>
+			</div>
+			<div class="Web-right">
+				<div id="mainTitle" style="opacity: 1; display: block;position: relative; top:0px;">
+					<span style="font-weight: bold;">Y</span>i<span style="font-weight: bold; color:#e67300;">C</span>hun<span style="font-weight: bold; color: #5c5cd6;"> S</span>ung
+				</div>	
+						
+				<div id="StartButton" class="StartButton" onclick="" style="display: none;">
+					coming soon...
+				</div>
+				<div id="pageDown" class="PageDownButton" onclick="ChangeToNextPage();">Pagedown</div>
+				<div id="pageUp" class="PageUpButton" onclick="BackToLastPage() ;">Pageup</div>
+				<a id="linkToMyProject" href="https://yichunsung.shinyapps.io/TaiwanCWB/" target="_blank">
+					<div id = "ButtonToProject" class="aButton" onmouseover="changeToAButton();" onmouseout="BackToAButton();">
+						go
+					</div>
+				</a>
+		</div>
+		
+	</div>
+		
+	</div>
+	<div style="clear:both"></div>
+</div>
+
+</body>
+</html>
