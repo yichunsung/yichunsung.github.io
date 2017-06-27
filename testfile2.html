@@ -51,6 +51,9 @@
 				
 				if(Page1LeftStyle == 0 && sildeTOPStyle== 0 ){
 					// 抓第二頁布幕的Opacity
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').innerHTML = "R Project";
+					
 					var blockCurtainOpacity2 = parseFloat(window.getComputedStyle(blockCurtain2).getPropertyValue("opacity"));
 					var Page1Left = 0;
 					var Page2Left = 20;
@@ -65,13 +68,15 @@
 							var showOn = window.setInterval(function() {
 								if(blockCurtainOpacity2 <= 0){
 									window.clearInterval(showOn);
+									document.getElementById('TitleContent').style.display = "block";
+									document.getElementById('RProjectContent').style.display = "block";
 
 									return;
 								}
 								blockCurtainOpacity2-=0.02;
 								blockCurtain2.style.opacity = blockCurtainOpacity2;
 							}, 20);
-							alert(testblock1TOPStyle);
+							
 							return;
 						}
 						Page1Left--;
@@ -96,7 +101,12 @@
 					}, 30);
 				}else if(Page2LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain2).getPropertyValue("opacity")) == 0){ 
 				// turn to Page 3 
-
+					document.getElementById('RProjectContent').style.display = "none";
+					document.getElementById('RProjectContentAnswerBox').style.display = "none";
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "#333";
+					document.getElementById('TitleContent').innerHTML = "Travel Map";
+					
 					// 抓 第二頁和第三頁布幕的 opacity;
 					var blockCurtainOpacity2 = parseFloat(window.getComputedStyle(blockCurtain2).getPropertyValue("opacity"));
 					var blockCurtainOpacity3 = parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity"));
@@ -120,6 +130,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity3 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
 										blockCurtainOpacity3-=0.02;
@@ -151,7 +162,12 @@
 						blockCurtainOpacity2+=0.02;
 						blockCurtain2.style.opacity = blockCurtainOpacity2;
 					}, 20);
-				}else if(Page3LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity")) == 0){ // turn to Page 4
+				}else if(Page3LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity")) == 0){ 
+				// turn to Page 4
+
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "hsl(15, 0%, 95%)";
+					document.getElementById('TitleContent').innerHTML = "Blog";
 					// 抓 第三頁和第四頁的 opacity;
 					var blockCurtainOpacity3 = parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity"));
 					var blockCurtainOpacity4 = parseFloat(window.getComputedStyle(blockCurtain4).getPropertyValue("opacity"));
@@ -176,6 +192,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity4 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
 										blockCurtainOpacity4-=0.02;
@@ -207,6 +224,10 @@
 						blockCurtain3.style.opacity = blockCurtainOpacity3;
 					}, 20);
 				}else if(Page4LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain4).getPropertyValue("opacity")) == 0){ // turn to Page 5
+
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "#333";
+					document.getElementById('TitleContent').innerHTML = "Connect";
 					// 抓 第四頁和第五頁的 opacity;
 					var blockCurtainOpacity4 = parseFloat(window.getComputedStyle(blockCurtain4).getPropertyValue("opacity"));
 					var blockCurtainOpacity5 = parseFloat(window.getComputedStyle(blockCurtain5).getPropertyValue("opacity"));
@@ -231,6 +252,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity5 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
 										blockCurtainOpacity5-=0.02;
@@ -261,6 +283,10 @@
 						blockCurtain4.style.opacity = blockCurtainOpacity4;
 					}, 20);
 				}else if(Page5LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain5).getPropertyValue("opacity")) == 0){ // turn back to Page 1
+
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "#ffffff";
+					document.getElementById('TitleContent').innerHTML = "YiChun Sung";
 					// 抓 第5頁和第1頁布幕的 opacity;
 					var blockCurtainOpacity5 = parseFloat(window.getComputedStyle(blockCurtain5).getPropertyValue("opacity"));
 					//var blockCurtainOpacity1 = parseFloat(window.getComputedStyle(blockCurtain1).getPropertyValue("opacity"));
@@ -285,8 +311,9 @@
 									// 換頁結束，布幕上升
 									/*var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity1 <= 0){
-											window.clearInterval(showOn);
-											return;
+											window.clearInterval(showOn);*/
+											document.getElementById('TitleContent').style.display = "block";
+											/*return;
 										}
 										blockCurtainOpacity1-=0.02;
 										blockCurtain1.style.opacity = blockCurtainOpacity1;
@@ -322,6 +349,11 @@
 				}
 			}else if(wheelD <= 0){ //  Wheel detlaY <= 0 滑鼠滾輪向上
 				if(Page1LeftStyle == 0 ){ // Page 1 turn to Page 5
+
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "#333";
+					document.getElementById('TitleContent').innerHTML = "Connect";
+
 					// 抓 第5頁和布幕的 opacity;
 					var blockCurtainOpacity5 = parseFloat(window.getComputedStyle(blockCurtain5).getPropertyValue("opacity"));
 					var Page1Left = 0;
@@ -340,6 +372,7 @@
 							var showOn = window.setInterval(function() {
 								if(blockCurtainOpacity5 <= 0){
 									window.clearInterval(showOn);
+									document.getElementById('TitleContent').style.display = "block";
 									return;
 								}
 								blockCurtainOpacity5-=0.02;
@@ -367,6 +400,12 @@
 
 					}, 20);
 				}else if(Page2LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain2).getPropertyValue("opacity")) == 0){ // Page 2 turn to Page 1 
+					document.getElementById('RProjectContent').style.display = "none";
+					document.getElementById('RProjectContentAnswerBox').style.display = "none";
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "hsl(15, 0%, 95%)";
+					document.getElementById('TitleContent').innerHTML = "YiChun Sung";
+
 					// 抓 第2頁布幕的 opacity;
 					var blockCurtainOpacity2 = parseFloat(window.getComputedStyle(blockCurtain2).getPropertyValue("opacity"));
 					var Page1Left = -20;
@@ -388,8 +427,9 @@
 									// 換頁結束，布幕上升
 									/*var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity1 <= 0){
-											window.clearInterval(showOn);
-											return;
+											window.clearInterval(showOn);*/
+											document.getElementById('TitleContent').style.display = "block";
+											/*return;
 										}
 										blockCurtainOpacity1-=0.02;
 										blockCurtain1.style.opacity = blockCurtainOpacity1;
@@ -420,6 +460,10 @@
 						blockCurtain2.style.opacity = blockCurtainOpacity2;
 					}, 20)
 				}else if(Page3LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity")) == 0){ // Page 3 turn to Page 2
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "hsl(15, 0%, 95%)";
+					document.getElementById('TitleContent').innerHTML = "R Project";
+
 					// 抓第3頁和第2頁的 opacity;
 					var blockCurtainOpacity3 = parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity"));
 					var blockCurtainOpacity2 = parseFloat(window.getComputedStyle(blockCurtain2).getPropertyValue("opacity"));
@@ -443,6 +487,8 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity2 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('RProjectContent').style.display = "block";
+											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
 										blockCurtainOpacity2-=0.02;
@@ -474,6 +520,10 @@
 						blockCurtain3.style.opacity = blockCurtainOpacity3;
 					}, 20);
 				}else if(Page4LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain4).getPropertyValue("opacity")) == 0){ // Page 4 turn to Page 3
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "#333";
+					document.getElementById('TitleContent').innerHTML = "Travel Map";
+
 					// 抓第4頁和第3頁的 opacity;
 					var blockCurtainOpacity4 = parseFloat(window.getComputedStyle(blockCurtain4).getPropertyValue("opacity"));
 					var blockCurtainOpacity3 = parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity"));
@@ -498,6 +548,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity3 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
 										blockCurtainOpacity3-=0.02;
@@ -529,6 +580,10 @@
 						blockCurtain4.style.opacity = blockCurtainOpacity4;
 					}, 20);
 				}else if(Page5LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain5).getPropertyValue("opacity")) == 0){ // Page 5 turn to Page 4
+					document.getElementById('TitleContent').style.display = "none";
+					document.getElementById('TitleContent').style.color = "hsl(15, 0%, 95%)";
+					document.getElementById('TitleContent').innerHTML = "Blog";
+
 					// 抓第5頁和第4頁的 opacity;
 					var blockCurtainOpacity5 = parseFloat(window.getComputedStyle(blockCurtain5).getPropertyValue("opacity"));
 					var blockCurtainOpacity4 = parseFloat(window.getComputedStyle(blockCurtain4).getPropertyValue("opacity"));
@@ -553,6 +608,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity4 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
 										blockCurtainOpacity4-=0.02;
@@ -587,6 +643,40 @@
 			}
 			
 		}
+
+	// Page 1 Select Box 
+
+	var CWBoption = function(){
+		var RProjectContentAnswerBox = document.getElementById('RProjectContentAnswerBox');
+		var CWBContent = document.getElementById('CWBContent');
+		var MapContent = document.getElementById('MapContent');
+		var trans97Content = document.getElementById('trans97Content');
+		trans97Content.style.display = "none";
+		CWBContent.style.display = "block";
+		MapContent.style.display = "none";
+		RProjectContentAnswerBox.style.display = "block";
+	}
+	var RMapoption = function(){
+		var RProjectContentAnswerBox = document.getElementById('RProjectContentAnswerBox');
+		var MapContent = document.getElementById('MapContent');
+		var CWBContent = document.getElementById('CWBContent');
+		var trans97Content = document.getElementById('trans97Content');
+		trans97Content.style.display = "none";
+		CWBContent.style.display = "none";
+		MapContent.style.display = "block";
+		RProjectContentAnswerBox.style.display = "block";
+	}
+		
+	var trans97apoption = function(){
+		var RProjectContentAnswerBox = document.getElementById('RProjectContentAnswerBox');
+		var MapContent = document.getElementById('MapContent');
+		var CWBContent = document.getElementById('CWBContent');
+		var trans97Content = document.getElementById('trans97Content');
+		trans97Content.style.display = "block";
+		CWBContent.style.display = "none";
+		MapContent.style.display = "none";
+		RProjectContentAnswerBox.style.display = "block";
+	}
 	</script>
 
 
@@ -620,7 +710,6 @@
 				<div style="float: left; height: 20vh; width: 20%; background-color: hsl(15, 0%, 95%);"></div>
 				<div style="float: left;  height: 20vh; width: 20%; background-color: #333;"></div>
 				<div style="float: left;  height: 20vh; width: 20%; "></div>-->
-
 			</div>
 			<!-- Select bar -->
 			<div class="slect-button-frame">
@@ -642,60 +731,151 @@
 			</div>	
 		
 		</div>
-		<div class="inner-frame-section" >
-			<!-- section 1 -->
-			<div class="inner-frame-section-1" id="page1">
-				<div style="display: none;">
-					<div class="section-outer-box" style="left: 3px; top:2px; opacity: 0.9; border: 1px solid white;">
-						R project
-					</div>
-					<div class="section-outer-box" style="top: -400px; left: 408px;" >
-						<div class="section-inner-box" >
-							Blog
-						</div>
-						<div class="section-inner-box"  style="height: 197px; margin-top: 1px;" >
-							Travel map
-						</div>
-					</div>
-				</div>
 
+<!-- ======================================================= -->
+
+		<!-- Web Content  inner-frame -->
+		<div class="inner-frame-section" >
+		<!-- ####################################### -->
+			<!-- Page 1  -->
+			<!-- Main Page -->
+			<div class="inner-frame-section-1" id="page1">
+				<!-- Page 1 Content -->
+				<!-- Section Title = None -->
+				<!-- Section Content -->
 			</div>
+		<!-- ####################################### -->
+
+			<!-- Page 2  -->
+			<!-- R Project -->
 			<div class="inner-frame-section-2" id="page2" style="background-image: url('img/m1.jpg');">
-				<div id="blockCurtain2" class="block-black">
+				<!-- Section Title = R Project -->
+				<div id="blockCurtain2" class="block-black" style="position: relative; z-index: 6">
 					<div class="block-black-logo">
 						R Project
 					</div>
 				</div>
+				<!-- Section Content  -->
+				<div id="RProjectContent" style="display: none; position: relative; z-index: 6; top: -80vh; left: 8vw">
+					<!-- R Project Box 1 -->
+					<div class="section-outer-box" style="margin-top: 36px;"> 
+						<div id="RProjectContentCWB" class="section-inner-box" onclick="CWBoption();">
+							CWB Data Project
+						</div>
+						<div id="RProjectContentRMap" class="section-inner-box" style="top: -202px; left: 210px;" onclick="RMapoption();">
+							Use R to bulid our map
+						</div>
+					</div>
+					<!-- R Project Box 2 -->
+					<div class="section-outer-box" style="margin-top: 10px;">
+						<div id="RProjectContentTwd97" class="section-inner-box" onclick="trans97apoption();">
+							Transform TWD97
+						</div>
+					</div>	
+					<!-- R Project Answer Box -->
+					<div id="RProjectContentAnswerBox" class="section-answer-box" >
+						<div id="AnswerBoxBackground" class="section-answer-box-background">
+							<!-- Opacity Background -->
+						</div>
+						<div id="AnswerBoxText" class="section-answer-box-text">
+							<div id="CWBContent" style="display: block;">
+								<h3>CWB Data Project</h3>
+								<hr />
+								<p>
+									Because of difficulty downloading data from Taiwan CWB website, I built a new method to easily manage weather data.
+									<br />
+									<br />
+									If you want to use CWB data every day, using R script to read data is a better way.
+									<br />
+									<div class="section-answer-box-link">
+										Launch Project
+									</div>
+								</p>
+							</div>
+							
+							<div id="MapContent" style="display: none;">
+								<h3>Use R to bulid our map</h3>
+								<hr />
+								<p>
+									Use R to build a map
+									<br />
 
+									<br />
+									
+									<br />
+									<div class="section-answer-box-link">
+										Launch Project
+									</div>
+								</p>
+							</div>
+							<div id="trans97Content" style="display: none;">
+								<h3>Transform TWD97</h3>
+								<hr />
+								<p>
+									New Package for R!
+									<br />
+									You can use this package to transform your location Data, and you can use it to measure it distance.
+									<br />
+									
+									<br />
+									<div class="section-answer-box-link">
+										Launch Project
+									</div>
+								</p>
+							</div>
+						</div>
+
+						
+					</div>
+				</div>
 			</div>
+		<!-- ####################################### -->
+
+			<!-- Page 3  -->
+			<!-- Travel Map -->
 			<div class="inner-frame-section-3" id="page3" style="background-image: url('img/IMAG0556.jpg');">
+				<!-- Section Title = Travel Map -->
 				<div id="blockCurtain3" class="block-white">
 					<div class="block-white-logo">
 						Travel Map
 					</div>
 				</div>
-
-
+				<!-- Section Content  -->
+				<div>
+					
+				</div>
 			</div>
+		<!-- ####################################### -->
+
+			<!-- Page 4  -->
+			<!-- Blog -->
 			<div class="inner-frame-section-4" id="page4" style="background-image: url('img/DSC_0328.jpg');">
+				<!-- Section Title = Blog -->
 				<div id="blockCurtain4" class="block-black">
 					<div class="block-black-logo">
 						Blog
 					</div>
 				</div>
-
+				<!-- Section Content  -->
 			</div>
+		<!-- ####################################### -->
+
+			<!-- Page 5  -->
+			<!-- Contact -->
 			<div class="inner-frame-section-5" id="page5" style="background-image: url('img/DSC_0254.jpg');">
+				<!-- Section Title = Contact -->
 				<div id="blockCurtain5" class="block-white">
 					<div class="block-white-logo">
 						Contact
 					</div>
 				</div>
-
+				<!-- Section Content  -->
 			</div>
-			
-			
+				
 		</div>
+
+<!-- ======================================================= -->
+		<!-- Web Silde Bar -->
 		<div class = "silde-logo-banner" style="display: block;">
 			<div style="width: 8vw; height: 100%; ">
 				<div id="silde" style="position: relative; top: 0vh; width: 8vw; height: 500%">
@@ -711,9 +891,11 @@
 				</div>
 			</div>
 		</div>
+<!-- ======================================================= -->
+		<!-- Web Logo -->
 		<div style="z-index: 7; position: relative; top: -180vh; width: 400px; height: 20vh; color: #fff; font-size: 72px;">
 			<div style="position: relative; top: 20vh; height: 20vh; "> </div>
-			<div style="position: relative; top: -48px; left: 4vw;"> YiChun Sung </div>
+			<div id="TitleContent" style="position: relative; top: -48px; left: 4vw;"> YiChun Sung</div>
 		</div>
 		
 		

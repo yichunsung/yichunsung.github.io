@@ -77,22 +77,62 @@
 			}
 
 				.section-outer-box{
-					position: relative;
-					height: 400px;
-					width: 400px;
-					color: white;
-					/*float: left;*/
-					
+					margin-left: 10px; 
+					height: 204px; 
+					width :406px;
 				}
 					.section-inner-box{
-						
+						position: relative;
 						height: 200px;
 						width: 200px;
 						color: white;
+						background-color: #333;
 						opacity: 0.9;
-						
 						border: 1px solid white;
+						cursor: pointer;
 					}
+				.section-answer-box{
+					display: none;
+					position: relative;
+					top: -450px; 
+					left: 40%; 
+					height: 70vh; 
+					width: 50%;
+					background-color: #333;
+					opacity: 0.8;
+				}
+					.section-answer-box-background{
+					z-index: 7;
+					position: relative;
+					/*top: -450px; 
+					left: 40%; */
+					height: 70vh; 
+					width: 100%;
+					background-color: #333;
+					opacity: 0.3;
+				}
+				.section-answer-box-text{
+					z-index: 8;
+					position: relative;
+					top: -70vh; 
+					/*left: 40%;*/ 
+					height: 70vh; 
+					width: 95%;
+					color: white;
+					opacity: 1
+				}
+				.section-answer-box-link{
+
+					width: 120px;
+					height: 30px;
+					border:1px solid;
+					font-size: 18px;
+					color: yellow;
+					text-align: center;
+					line-height: 30px;
+					margin-left: auto;
+					cursor: pointer;
+				}
 
 			.inner-frame-section-2{ /* Page 2 */
 				z-index: 4;
@@ -104,7 +144,6 @@
 				margin-left: cover;
 				margin-right: cover;
 				font-size: 28px;
-				
 				background-size: cover;				
 			}
 			.inner-frame-section-3{ /* Page 3 */
@@ -204,7 +243,7 @@
 			overflow: hidden;
 		}
 		.Web-Logo{
-			
+
 		}
 		.slect-button-frame{
 			z-index: 7;
