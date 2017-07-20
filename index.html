@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<title>New Index</title>
 	<link rel="stylesheet" type="text/css" href="css/testCSS2.css" />
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 	<script type="text/javascript">
 		function test(){
 			alert('haha');
@@ -130,6 +132,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity3 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TMapContent').style.opacity = "1";
 											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
@@ -164,7 +167,7 @@
 					}, 20);
 				}else if(Page3LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity")) == 0){ 
 				// turn to Page 4
-
+					document.getElementById('TMapContent').style.opacity = "0";
 					document.getElementById('TitleContent').style.display = "none";
 					document.getElementById('TitleContent').style.color = "hsl(15, 0%, 95%)";
 					document.getElementById('TitleContent').innerHTML = "Blog";
@@ -460,6 +463,7 @@
 						blockCurtain2.style.opacity = blockCurtainOpacity2;
 					}, 20)
 				}else if(Page3LeftStyle == 0 && parseFloat(window.getComputedStyle(blockCurtain3).getPropertyValue("opacity")) == 0){ // Page 3 turn to Page 2
+					document.getElementById('TMapContent').style.opacity = "0";
 					document.getElementById('TitleContent').style.display = "none";
 					document.getElementById('TitleContent').style.color = "hsl(15, 0%, 95%)";
 					document.getElementById('TitleContent').innerHTML = "R Project";
@@ -548,6 +552,7 @@
 									var showOn = window.setInterval(function() {
 										if(blockCurtainOpacity3 <= 0){
 											window.clearInterval(showOn);
+											document.getElementById('TMapContent').style.opacity = "1";
 											document.getElementById('TitleContent').style.display = "block";
 											return;
 										}
@@ -750,26 +755,29 @@
 			<!-- R Project -->
 			<div class="inner-frame-section-2" id="page2" style="background-image: url('img/m1.jpg');">
 				<!-- Section Title = R Project -->
-				<div id="blockCurtain2" class="block-black" style="position: relative; z-index: 6">
+				<div id="blockCurtain2" class="block-black" style="position: relative; z-index: 4">
 					<div class="block-black-logo">
 						R Project
 					</div>
 				</div>
 				<!-- Section Content  -->
-				<div id="RProjectContent" style="display: none; position: relative; z-index: 6; top: -80vh; left: 8vw">
+				<div id="RProjectContent" style="display: none; position: relative; z-index: 6; top: -80vh; left: 8vw;">
 					<!-- R Project Box 1 -->
 					<div class="section-outer-box" style="margin-top: 36px;"> 
 						<div id="RProjectContentCWB" class="section-inner-box" onclick="CWBoption();">
-							CWB Data Project
+							Project
 						</div>
 						<div id="RProjectContentRMap" class="section-inner-box" style="top: -202px; left: 210px;" onclick="RMapoption();">
-							Use R to bulid our map
+							Notebook
 						</div>
 					</div>
 					<!-- R Project Box 2 -->
 					<div class="section-outer-box" style="margin-top: 10px;">
 						<div id="RProjectContentTwd97" class="section-inner-box" onclick="trans97apoption();">
-							Transform TWD97
+							R Package
+						</div>
+						<div id="RProjectContentRMap" class="section-inner-box" style="top: -202px; left: 210px;">
+							Kaggle
 						</div>
 					</div>	
 					<!-- R Project Answer Box -->
@@ -839,10 +847,24 @@
 					<div class="block-white-logo">
 						Travel Map
 					</div>
-				</div>
+				</div >
 				<!-- Section Content  -->
-				<div>
-					
+				<div id="TMapContent" style="display: block; position: relative; z-index:6; top: -80vh; left: 8vw; opacity: 0;">
+					<div style=" height: 20vh; width: 100%; ">
+						
+					</div>
+					<!--<div id="Tmap" style=" height: 45vh; width: 100%; opacity: 0.9;" > </div>
+						<script>
+
+						var mymap = L.map('Tmap').setView([0, 90], 3);
+
+						L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+							maxZoom: 18,
+							id: 'mapbox.streets'
+						}).addTo(mymap);
+
+						</script>-->
+						
 				</div>
 			</div>
 		<!-- ####################################### -->
@@ -893,8 +915,8 @@
 		</div>
 <!-- ======================================================= -->
 		<!-- Web Logo -->
-		<div style="z-index: 7; position: relative; top: -180vh; width: 400px; height: 20vh; color: #fff; font-size: 72px;">
-			<div style="position: relative; top: 20vh; height: 20vh; "> </div>
+		<div style="z-index: 5; position: relative; top: -180vh; width: 400px; height: 20vh; color: #fff; font-size: 72px;">
+			<div style="z-index: 5; position: relative; top: 0vh; height: 20vh; opacity: 0;"> </div>
 			<div id="TitleContent" style="position: relative; top: -48px; left: 4vw;"> YiChun Sung</div>
 		</div>
 		
