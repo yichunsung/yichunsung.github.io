@@ -1,0 +1,22 @@
+---
+title: "Demo project"
+output: 
+  html_document:
+    highlight: zenburn
+    theme: readable
+---
+<style>
+body { background-color:#f2f2f2; }
+</style>
+
+## Taiwan Population map
+###[Link!](http://yichunsung.github.io/twpop)
+
+## Taipei Earthquake map
+###[Link!](http://yichunsung.github.io/taipei_eq)
+
+## How to predict the movie IMDB score
+###[Link!](http://yichunsung.github.io/predict_the_movie_IMDB_score)
+
+## Volcano Clustering
+###[Link!](http://yichunsung.github.io/Volcano_Kaggle)
