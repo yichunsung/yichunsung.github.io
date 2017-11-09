@@ -20,3 +20,14 @@ body { background-color:#f2f2f2; }
 
 ## Volcano Clustering
 ###[Link!](http://yichunsung.github.io/Volcano_Kaggle)
+
+---
+
+## how to use google sheets with R
+###[Link!](http://yichunsung.github.io/r_notebook/notebook_for_goolesheets)
+
+## Using R and Tensorflow to build CNN and predict Mnist label
+
+###[Link!](http://yichunsung.github.io//DeepLearningBook/R-Tensorflow_Notebook/R_tensorflow.html)
+
+
