@@ -23,6 +23,14 @@
     <!-- Custom styles for this template -->
     <link href="css/agency.min.css" rel="stylesheet">
 
+    <script type="text/javascript">
+      function copy() {
+        var copyText = document.getElementById("address");
+        copyText.select();
+        document.execCommand("Copy");
+        //alert("Copied the text: " + copyText.value);
+    }
+    </script>
   </head>
   <body>
       <header class="masthead" style="height: 100vh;">
@@ -32,9 +40,13 @@
           <h3 class="section-subheading text-muted"><span style="color: white;">因為我們知道，您應該不想讓太多人知道您有多蠢</span></h3>
           <div>
             錢包地址：
-            <input type="text" name="" value="0xA8695d9E729242Ca9017d95221fB997d86109CC7" disabled>
+            <input id ="address" type="text" name="" value="0xA8695d9E729242Ca9017d95221fB997d86109CC7" disabled>
           </div>
+          <br>
+          <button onclick="copy()">Copy address</button>
+          <br>
           <div>
+            <br>
             我們還是想要勸告您，購買Token前請三思！但我們還是讚嘆您那美好到無藥可救的愚蠢。
           </div>
           <div class="intro-heading text-uppercase"></div>
