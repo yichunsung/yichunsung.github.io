@@ -1,0 +1,90 @@
+.pixnet-slideopen-root {
+  width: 640px;
+  height: 0px;
+  overflow: hidden;
+  transition: 1s; }
+  .pixnet-slideopen-root .pixnet-ad-video {
+    position: relative;
+    display: table-cell;
+    width: 640px;
+    height: 360px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    background-color: black; }
+    .pixnet-slideopen-root .pixnet-ad-video video {
+      width: 640px;
+      height: 360px; }
+    .pixnet-slideopen-root .pixnet-ad-video .pixnet-ad-video-control-hide {
+      display: none; }
+    .pixnet-slideopen-root .pixnet-ad-video button {
+      position: absolute;
+      border: none;
+      background: transparent;
+      margin: 0;
+      padding: 0; }
+      .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-expand {
+        right: 3px;
+        bottom: 8px;
+        width: 22px;
+        height: 22px; }
+      .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-soundoff {
+        bottom: 8px;
+        left: 3px;
+        width: 22px;
+        height: 22px; }
+      .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-soundon {
+        bottom: 8px;
+        left: 3px;
+        width: 22px;
+        height: 22px; }
+      .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-pause {
+        top: 149px;
+        left: 289px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background: rgba(0, 0, 0, 0.8); }
+        .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-pause img {
+          width: 26px;
+          height: 26px; }
+      .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-play {
+        top: 149px;
+        left: 289px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background: rgba(0, 0, 0, 0.8); }
+        .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-play img {
+          width: 28px;
+          height: 28px; }
+      .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-replay {
+        top: 149px;
+        left: 289px;
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+        background: rgba(0, 0, 0, 0.8); }
+        .pixnet-slideopen-root .pixnet-ad-video button.pixnet-ad-video-control-replay img {
+          width: 29px;
+          height: 29px; }
+
+.pixnet-slideopen-bg {
+  width: 640px;
+  height: 480px;
+  position: relative;
+  z-index: 1;
+  top: 0; }
+
+.pixnet-slideopen-video {
+  width: 640px;
+  height: 360px;
+  position: relative;
+  z-index: 4;
+  top: -369px;
+  /* bottom */
+  /*top:-425px;  center*/
+  /*top:-485px; top */
+  left: 0px;
+  display: none; }
