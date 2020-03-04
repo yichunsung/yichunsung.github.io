@@ -8,6 +8,14 @@ body {
 	height: auto;
 }
 
+.logo {
+	z-index: 99;
+	position: absolute;
+	top: 40vh;
+	left: 40vw;
+	cursor: pointer;
+}
+
 /**
  * Section 1
  */
@@ -16,34 +24,35 @@ body {
 	z-index: 99;
 	position: fixed;
 	top: 40px;
-	left: 80vw;
+	left: 82vw;
 	cursor: pointer;
 }
 
 .pt1-buttonA {
 	z-index: 99;
 	position: absolute;
-	top: 455px;
+	top: 45vw;
 	left: 70vw;
 	cursor: pointer;
+	opacity: 0;
 }
 
 .pt1-buttonB {
 	z-index: 99;
 	position: absolute;
-	top: 780px;
+	top: 80vw;
 	left: 30vw;
 	cursor: pointer;
-	animation-delay: 0.3s;
+	opacity: 0;
 }
 
 .pt1-buttonC {
 	z-index: 99;
 	position: absolute;
-	top: 1100px;
+	top: 115vw;
 	left: 64vw;
 	cursor: pointer;
-	animation-delay: 0.6s;
+	opacity: 0;
 }
 
 /**
@@ -53,55 +62,182 @@ body {
 .pt1-partC {
 	z-index: 99;
 	position: absolute;
-	top: 1380px;
-	left: 15vw;
+	top: 140vw;
+	left: 20vw;
 	cursor: pointer;
-	animation-delay: 0.9s;
+	opacity: 0;
 }
 
 .pt1-partC-1 {
 	z-index: 99;
 	position: absolute;
-	top: 1650px;
-	left: 10vw;
+	top: 167vw;
+	left: 15vw;
 	cursor: pointer;
-	animation-delay: 1.2s;
+	opacity: 0;
 }
 
 .pt1-partC-2 {
 	z-index: 99;
 	position: absolute;
-	top: 1810px;
+	top: 185vw;
 	left: 42vw;
 	cursor: pointer;
-	animation-delay: 1.2s;
+	opacity: 0;
 }
 
 .pt1-partC-3 {
 	z-index: 99;
 	position: absolute;
-	top: 1610px;
+	top: 165vw;
 	left: 65vw;
 	cursor: pointer;
-	animation-delay: 1.2s;
+	opacity: 0;
 }
 
 .pt1-partA {
 	z-index: 99;
 	position: absolute;
-	top: 2060px;
-	left: 45.5vw;
+	top: 218vw;
+	left: 47vw;
 	cursor: pointer;
-	animation-delay: 1.5s;
+	opacity: 0;
 }
 
 .pt1-partB {
 	z-index: 99;
 	position: absolute;
-	top: 2680px;
-	left: 10vw;
+	top: 278vw;
+	left: 18vw;
 	cursor: pointer;
-	animation-delay: 1.8s;
+	opacity: 0;
 }
 
+
+@media(max-width: 500px) {
+	.pt1-bg {
+		z-index: 1;
+		width: 100vw;
+		height: auto;
+	}
+
+	.logo {
+		width: 150px !important;
+		height: 202px !important;
+		z-index: 99;
+		position: absolute;
+		top: 20vh;
+		left: 35vw;
+		cursor: pointer;
+	}
+
+	/**
+	 * Section 1
+	 */
+
+	.pt1-buynow {
+		width: 32px !important;
+		height: 84px !important;
+		z-index: 99;
+		position: fixed;
+		top: 40px;
+		left: 80vw;
+		cursor: pointer;
+	}
+
+	.pt1-buttonA {
+		width: 27.5px !important;
+		height: 27.5px !important;
+		z-index: 99;
+		position: absolute;
+		top: 45vw;
+		left: 70vw;
+		cursor: pointer;
+	}
+
+	.pt1-buttonB {
+		width: 27.5px !important;
+		height: 27.5px !important;
+		z-index: 99;
+		position: absolute;
+		top: 80vw;
+		left: 30vw;
+		cursor: pointer;
+	}
+
+	.pt1-buttonC {
+		width: 27.5px !important;
+		height: 27.5px !important;
+		z-index: 99;
+		position: absolute;
+		top: 110vw;
+		left: 64vw;
+		cursor: pointer;
+	}
+
+	/**
+	 * Section 2
+	 */
+
+	.pt1-partC {
+		width: 166.5px !important;
+		height: 76px !important;
+		z-index: 99;
+		position: absolute;
+		top: 135vw;
+		left: 12vw;
+		cursor: pointer;
+	}
+
+	.pt1-partC-1 {
+		width: 82.5px !important;
+		height: 15px !important;
+		z-index: 99;
+		position: absolute;
+		top: 167vw;
+		left: 8vw;
+		cursor: pointer;
+	}
+
+	.pt1-partC-2 {
+		width: 91px !important;
+		height: 15px !important;
+		z-index: 99;
+		position: absolute;
+		top: 185vw;
+		left: 42vw;
+		cursor: pointer;
+	}
+
+	.pt1-partC-3 {
+		width: 91px !important;
+		height: 15px !important;
+		z-index: 99;
+		position: absolute;
+		top: 165vw;
+		left: 65vw;
+		cursor: pointer;
+	}
+
+	.pt1-partA {
+		width: 154.5px !important;
+		height: 83.5px !important;
+		z-index: 99;
+		position: absolute;
+		top: 208vw;
+		left: 47vw;
+		cursor: pointer;
+	}
+
+	.pt1-partB {
+		width: 162px !important;
+		height: 80px !important;
+		z-index: 99;
+		position: absolute;
+		top: 268vw;
+		left: 8vw;
+		cursor: pointer;
+	}
+
+}
 
