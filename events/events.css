@@ -1,0 +1,891 @@
+body {
+	margin: 0;
+	width: 100vw;
+	overflow-x: hidden; 
+}
+
+.events-header {
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+}
+
+/**
+ * booking section
+ */
+
+.events-booking-section {
+	width: 100vw;
+	height: 7vw;
+	background-color: #006EDC;
+}
+
+.events-booking-section > .events-booking-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+}
+
+.events-booking-text {
+	width: 451px;
+	height: 40px;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+.events-booking-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 200px;
+	height: 50px;
+	background: #FFFFFF;
+	border-radius: 5px;
+	/* 立即報名 */
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	text-align: center;
+	color: #006EDC;
+	cursor: pointer;
+	transition: 0.4s;
+}
+
+.events-booking-button:hover {
+	background-color: #003c78;
+	color: #fff;
+}
+
+@media(max-width: 1024px) {
+	.events-booking-section {
+		height: 30vw;
+	}
+
+	.events-booking-text { 
+		font-size: 18px;
+	}
+}
+
+/**
+ * intro section
+ */
+
+.events-intro-section {
+	width: 100%;
+	height: 89vw;
+	background-color: #fff;
+	padding-top: 34px;
+	padding-left: 3.5vw;
+	overflow-x: hidden;
+}
+
+.events-intro-introduction {
+	display: flex;
+	width: 85.2vw;
+	height: 23.9vw;
+}
+
+.events-title {
+	width: 85.2vw;
+	height: 2.7vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 34px;
+	line-height: 49px;
+	color: #006EDC;
+}
+
+.events-title > h1 {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 34px;
+	line-height: 49px;
+}
+
+.events-subtitle-frame {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: auto;
+	height: 3.4vw;
+	margin-top: 1.1vw;
+	margin-left: 3.5vw;
+}
+
+.events-subtitle-reporter {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: auto;
+	height: 3.4vw;
+	margin-top: 1.1vw;
+}
+
+.phone {
+	display: none !important;
+}
+
+.subtitle-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 90%;
+	height: 3.4vw;
+}
+
+.subtitle-container-bottom {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 90%;
+	height: 3.4vw;
+}
+
+.frame-item {
+	width: 19.5vw;
+	height: 3.4vw;
+}
+
+.item-bottom {
+	width: 25.5vw !important;
+	margin-left: 6vw;
+}
+
+.item-bottom-part2 {
+	margin-left: 27vw;
+}
+
+.subtitle-sidebar {
+	height: 2vw;
+	width: 0.4vw;
+	background-color: #0094D7;
+}
+
+.subtitle-text {
+	margin-left: 10px;
+}
+
+.subtitle-text > h2 {
+	/* 重量級講者 */
+	font-family: Noto Sans TC;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 28px;
+	line-height: 41px;
+	color: #000000;
+}
+
+.events-post {
+	width: 77vw;
+	height: auto;
+	margin-bottom: 34px;
+	padding-top: 2.7vw;
+	padding-left: 7vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 36px;
+	/* or 180% */
+	color: #636363;
+}
+
+.events-grid-frame {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 90%;
+	height: 40vw;
+	margin-top: 3vw;
+}
+
+.profile-container {
+	width: 19.5vw;
+	height: 40vw;
+}
+
+.profile-photo {
+	width: 19.5vw;
+	height: 19.5vw;
+	background-size: 100% 100%;
+}
+
+.profile-name {
+	margin-top: 2vw;
+	font-family:'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #000000;
+}
+
+.profile-title {
+	margin-top: 0.8vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 22px;
+	color: #000000;
+}
+
+.profile-description {
+	margin-top: 0.8vw;
+	width: 19.5vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 36px;
+	color: #636363;
+}
+
+@media(max-width: 1024px) {
+	.events-intro-section {
+		padding-left: 0vw;
+		height: auto;
+		overflow: hidden;
+	}
+
+	.events-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 20vw;
+	}
+
+	.events-title > h1 {
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 34px;
+		line-height: 49px;
+	}
+
+	.events-post {
+		width: 90vw;
+		height: auto;
+		margin-bottom: 34px;
+		padding-top: 2.7vw;
+		padding-left: 5vw;
+		padding-right: 5vw;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 36px;
+		/* or 180% */
+		color: #636363;
+	}
+
+	.events-subtitle-frame {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 90%;
+		height: 20vw;
+		margin-top: 1.1vw;
+	}
+
+	.subtitle-sidebar {
+		height: 6vw;
+		width: 0.8vw;
+		background-color: #0094D7;
+	}
+
+	.events-grid-frame {
+		display: flex;
+		justify-content: space-around;
+		align-items: flex-start;
+		align-content: flex-start;
+		width: 100%;
+		height: auto;
+		margin-top: 3vw;
+		overflow: hidden;
+	}
+
+	.profile-container {
+		width: 90%;
+		height: auto;
+	}
+
+	.profile-photo {
+		width: 90vw;
+		height: 90vw;
+		background-size: 100% 100%;
+	}
+
+	.profile-description {
+		margin-top: 0.8vw;
+		width: 95%;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 36px;
+		color: #636363;
+		overflow: hidden;
+	}
+
+	.subtitle-container {
+		display: none;
+		justify-content: space-around;
+		align-items: center;
+		width: 90%;
+		height: 3.4vw;
+	}
+
+	.subtitle-container-bottom {
+		display: flex;
+		justify-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 180vw;
+	}
+
+	.frame-item {
+		width: 90vw;
+		height: 10vw;
+		margin-top: 10vw;
+		margin-bottom: 2vw;
+	}
+
+	.item-bottom {
+		width: 90vw !important;
+		margin-left: 6vw;
+	}
+
+	.item-bottom-part2 {
+		margin-left: 6vw;
+	}
+
+	.events-subtitle-reporter {
+		height: 10vw;
+	}
+
+	.pc {
+		display: none !important;
+	}
+
+	.phone {
+		display: flex !important;
+	}
+}
+
+/**
+ * fintech section
+ */
+
+.events-fintech-section {
+	width: 100vw;
+	height: 26vw; /*16.46vw; padding-left: 3.5vw;*/
+	background-color: #fff;
+}
+
+.events-fintech-section > .events-subtitle-frame {
+	padding-left: 3.5vw;
+}
+
+.events-fintech-frame {
+	width: 100vw;
+	height: 16.46vw;
+	background-color: #006EDC;
+}
+
+.fintech-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 77vw;
+	height: 100%;
+	margin-left: 7vw;
+}
+
+.fintech-photo {
+	width: 11.5vw;
+	height: 11.5vw;
+	background-size: 100% 100%;
+}
+
+.fintech-description {
+	width: 65.5vw;
+	height: 11.5vw;
+	padding-left: 2vw;
+}
+
+.fintech-title {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #FFFFFF;
+}
+
+.fintech-position {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 15px;
+	line-height: 22px;
+	color: #FFFFFF;
+}
+
+.fintech-text {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 26px;
+	color: #FFFFFF;
+}
+
+@media(max-width: 1024px) {
+	.events-fintech-section {
+		height: 200vw; /*16.46vw; padding-left: 3.5vw;*/
+	}
+
+	.events-fintech-frame {
+		height: 180vw;
+	}
+
+	.fintech-container {
+		align-content: flex-start;
+		margin-left: 10vw;
+	}
+
+	.fintech-photo {
+		margin-top: 10vw;
+		width: 80vw;
+		height: 80vw;
+		background-size: 100% 100%;
+	}
+
+	.fintech-description {
+		width: 100%;
+		height: auto;
+		padding-left: 2vw;
+	}
+}
+
+/**
+ * reporter section
+ */
+
+.events-reporter-section {
+	width: 100vw;
+	height: 69.653vw;
+	background-color: #fff;
+	margin-left: 3.5vw;
+}
+
+@media(max-width: 1024px) {
+	.events-reporter-section {
+		height: auto;
+		margin-left: 0vw;
+	}
+
+}
+
+/**
+ * Content section
+ */
+
+.events-content-section {
+	width: 100vw;
+	height: 27vw; /*22vw;*/
+	background-color: #fff;
+}
+
+.content-container {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 100vw;
+	height: 22vw; /*22vw;*/
+	margin-top: 10px;
+	background-color: #006EDC;
+}
+
+.content-text {
+	width: 38.2vw;
+	height: 14vw;
+	margin-left: 4vw;
+}
+
+.content-text > .content-title {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 52px;
+	color: #FFFFFF;
+}
+
+.content-text > .content-data {
+	margin-top: 2vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #FFFFFF;
+
+}
+
+.content-bar {
+	width: 2vw;
+	height: 24vw;
+	background-color: #fff;
+	transform: rotate(15deg);
+}
+
+@media(max-width: 1024px) {
+	.events-content-section {
+		height: 100vw;
+	}
+
+	.content-container {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		width: 100vw;
+		height: 70vw;
+		margin-top: 10px;
+		background-color: #006EDC;
+	}
+
+	.content-text {
+		width: 38.2vw;
+		height: 60vw;
+		margin-left: 4vw;
+	}
+
+	.content-text > .content-title {
+		line-height: 30px;
+		font-size: 18px;
+	}
+
+	.content-text > .content-data {
+		line-height: 22px;
+		font-size: 14px;
+	}
+
+	.content-bar {
+		width: 2vw;
+		height: 75vw;
+		background-color: #fff;
+		transform: rotate(15deg);
+	}
+}
+
+/**
+ * schecdule section
+ */
+
+.events-schedule-section {
+	width: 100vw;
+	height: auto;
+	background-color: #fff;
+}
+
+.schedule-frame {
+	margin-top: 1.1vw;
+	margin-left: 3.5vw;
+	height: 100vw;
+}
+
+.events-table {
+	margin-top: 2vw;
+	margin-left: 6.5vw;
+	margin-bottom: 6vw;
+}
+
+.tr-grid {
+	height: 5vw;
+}
+
+.tr-grid-border {
+	height: 5vw;
+	border-top: 1px solid #595959;
+	border-bottom: 1px solid #595959;
+}
+
+.time-grid {
+	display: flex;
+	align-items: flex-start;
+	margin-top: 1vw;
+	width: 10.4vw;
+	height: 5vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #595959;
+}
+
+.text-grid {
+	height: 5vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #595959;
+	padding: 0;
+}
+
+span.small-text {
+	font-size: 18px;
+}
+
+.time-grid-border {
+	width: 10.4vw;
+	height: 5vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #595959;
+	border-top: 1px solid #595959;
+	border-bottom: 1px solid #595959;
+}
+
+.text-grid-border {
+	width: 68vw;
+	height: 5vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #595959;
+	padding: 0;
+	border-top: 1px solid #595959;
+	border-bottom: 1px solid #595959;
+}
+
+.booking-text {
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 20px;
+	line-height: 36px;
+	color: #636363;
+}
+
+.md5 {
+	margin-left: 3.5vw;
+	margin-top: 10px;
+}
+
+@media(max-width: 1024px) {
+	.schedule-frame {
+		height: auto;
+		margin-left: 0;
+	}
+
+	.time-grid {
+		display: flex;
+		align-items: flex-start;
+		margin-top: 1vw;
+		width: 20.4vw;
+		height: 5vw;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 35px;
+		color: #595959;
+	}
+
+	.text-grid {
+		height: 5vw;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 35px;
+		color: #595959;
+		padding: 0;
+	}
+
+	span.small-text {
+		font-size: 12px;
+	}
+
+	.time-grid-border {
+		width: 20.4vw;
+		height: 5vw;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 35px;
+		color: #595959;
+		border-top: 1px solid #595959;
+		border-bottom: 1px solid #595959;
+	}
+
+	.text-grid-border {
+		width: 68vw;
+		height: 5vw;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 14px;
+		line-height: 35px;
+		color: #595959;
+		padding: 0;
+		border-top: 1px solid #595959;
+		border-bottom: 1px solid #595959;
+	}
+
+	.md5 {
+		margin-left: 0vw;
+		margin-top: 10px;
+	}
+}
+
+footer.footer-frame {
+	width: 100vw;
+	height: 10vw;
+	background-color: #EFF8FF;
+}
+
+.footer-top {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 7.5vw;
+}
+
+.footer-tittle {
+	margin-left: 2vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 35px;
+	color: #006EDC;
+}
+
+.footer-image {
+	margin-left: 2vw;
+	width: 8vw;
+	height: auto;
+}
+
+.footer-image > img {
+	width: 100%;
+	height: 100%;
+}
+
+.footer-text-small {
+	margin-left: 2vw;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 23px;
+	color: #636363;
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 2.5vw;
+	background-color: #006EDC;
+	font-family: 'Noto Sans TC';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 23px;
+	text-align: center;
+	color: #FFFFFF;
+}
+
+@media(max-width: 1024px) {
+	footer.footer-frame {
+		width: 100vw;
+		height: 100vw;
+		background-color: #EFF8FF;
+	}
+
+	.footer-top {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		width: 100%;
+		height: 80vw;
+	}
+
+	.footer-tittle {
+		width: 80vw;
+		display: flex;
+		justify-content: center;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 35px;
+		color: #006EDC;
+	}
+
+	.footer-image {
+		width: 50%;
+		height: auto;
+	}
+
+	.footer-text-small {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 23px;
+		color: #636363;
+	}
+
+	.footer-bottom {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 20vw;
+		background-color: #006EDC;
+		font-family: 'Noto Sans TC';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 12px;
+		line-height: 23px;
+		text-align: center;
+		color: #FFFFFF;
+	}
+}
+
