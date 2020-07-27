@@ -420,7 +420,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 	width: 77vw;
 	height: 100%;
 	margin-left: 7vw;
@@ -475,6 +475,7 @@ body {
 	}
 
 	.fintech-container {
+		flex-wrap: wrap;
 		align-content: flex-start;
 		margin-left: 10vw;
 	}
