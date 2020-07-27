@@ -254,6 +254,10 @@ body {
 	color: #636363;
 }
 
+.mobile {
+		display: none;
+	}
+
 @media(max-width: 1024px) {
 	.events-intro-section {
 		padding-left: 0vw;
@@ -381,6 +385,10 @@ body {
 
 	.pc {
 		display: none !important;
+	}
+
+	.mobile {
+		display: block;
 	}
 
 	.phone {
