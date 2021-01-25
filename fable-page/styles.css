@@ -115,6 +115,11 @@ header {
     width: 91.4vw;
   }
 
+  .Logo {
+    width: 100px;
+    margin: 0 auto;
+  }
+
   .pageintro > article {
     top: 36%;
     left: 50%;
@@ -220,7 +225,7 @@ header {
   }
 
   .item > p {
-    font-size: 20px;
+    font-size: 2.6vw;
   }
 }
 
@@ -364,6 +369,13 @@ header {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+@media screen and (max-width: 1024px) {
+  .mode > .items > .item > .mode-img {
+    width: 25vw;
+    height: 13.7vh;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -569,9 +581,11 @@ header {
 
 /* Time */
 .time {
-  padding: 40px 0 0;
+  padding: 40px 0 40px;
   width: 100vw;
   max-width: 100%;
+  background-image: url(./images/time-background.png);
+  background-size: cover;
 }
 
 .time > h3 {
@@ -580,6 +594,13 @@ header {
   margin: 30px 0;
   font-family: var(--font-roboto);
   color: var(--main-color);
+}
+
+.time-title {
+  font-size: var(--font-content);
+  text-align: center;
+  font-family: var(--font-roboto);
+  font-weight: bold;
 }
 
 .time-container {
@@ -609,13 +630,13 @@ header {
     margin: 8vw auto;
   }
 
-  .time-container {
+  /* .time-container {
     flex-direction: column;
   }
 
   .time-container > p:nth-child(even) {
     display: none;
-  }
+  } */
 
   .time-container > p {
     margin: 1.6vw 0;
@@ -710,7 +731,7 @@ header {
   }
 }
 
-@media (min-width: 375px) and (max-width: 414px) {
+@media (min-width: 375px) and (max-width: 426px) {
   .experience {
     padding: 40px 0 40px;
   }
@@ -768,13 +789,13 @@ header {
 .footer > div {
   color: #fff;
   width: 60vw;
-  margin: 30px auto;
+  margin: 1vw auto;
 }
 
 .footer > div > h1 {
   color: #fff;
   width: 60vw;
-  font-size: 60px;
+  font-size: 2.8vw;
   text-align: center;
   margin: 10px auto 0;
 }
@@ -798,7 +819,7 @@ header {
 }
 
 .footer > button {
-  margin: 20px auto 20px;
+  margin: 2.4vw auto;
   width: 17vw;
   height: 3.4vw;
   background-color: var(--btn);
@@ -819,36 +840,61 @@ header {
   align-items: center;
 }
 
-.copyright > h5 {
+
+.copyright-group > h5 {
   font-size: 26px;
   color: rgb(29, 29, 29);
   margin: 0;
 }
 
-.copyright > h5 > span {
-  color: rgb(29, 29, 29);
+.copyright-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.copyright > p {
-  font-size: 26px;
-  color: var(--main-color);
-  margin: 0;
-  font-family: var(--font-roboto);
+.copyright-group:nth-child(1) > img {
+  width: 4vw;
 }
+.copyright-group:nth-child(2) > img {
+  width: 9.2vw;
+}
+
 
 @media screen and (max-width: 1440px) {
   .footer {
     height: 22vw;
   }
+
+  .footer > div > h1 {
+    font-size: 4.2vw;
+  }
   
   .footer > img {
     width: 21.9vw;
+  }
+
+  .footer > button {
+    width: 25vw;
+    height: 4.5vw;
+    margin: 3.4vw auto;
+  }
+
+  .copyright-group:nth-child(1) > img {
+    width: 6vw;
+  }
+  .copyright-group:nth-child(2) > img {
+    width: 13vw;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
     height: 28vw;
+  }
+
+  .footer > div > h1 {
+    font-size: 5vw;
   }
   
   .footer > img {
@@ -858,6 +904,13 @@ header {
     width: 30vw;
     height: 6.4vw;
     font-size: 2.4vw;
+  }
+
+  .copyright-group:nth-child(1) > img {
+    width: 7vw;
+  }
+  .copyright-group:nth-child(2) > img {
+    width: 15vw;
   }
 }
 
@@ -876,14 +929,32 @@ header {
   }
 
   .footer > button {
-    width: 25vw;
-    height: 6vw;
-    font-size: 2vw;
+    width: 28vw;
+    height: 7.4vw;
+    margin: 5.8vw auto;
+    font-size: 3vw;
+  }
+
+  .footer > div > h1:nth-child(1) {
+    position: relative;
+    left: -12vw;
+  }
+  
+  .footer > div > h1:nth-child(2) {
+    position: relative;
+    left: 5vw;
+  }
+
+  .copyright-group:nth-child(1) > img {
+    width: 10vw;
+  }
+  .copyright-group:nth-child(2) > img {
+    width: 22.5vw;
   }
 
 }
 
-@media (min-width: 375px) and (max-width: 414px) {
+@media (min-width: 375px) and (max-width: 426px) {
   .footer {
     padding: 10.6vw 0 18.6vw;
     height: 50.2vw;
@@ -895,7 +966,7 @@ header {
     width: 91.4vw;
     font-size: 36px;
     text-align: center;
-    margin: 10px 0 0;
+    margin: 4vw 0 0;
   }
 
   .footer > img {
@@ -905,14 +976,14 @@ header {
 
   .footer > button {
     height: 14vw;
-    margin: 5.3vw auto;
+    margin: 11vw auto;
     width: 91.4vw;
     font-size: 6.4vw;
   }
   .copyright {
     padding: 2.7vw 0;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
   }
 
   .copyright > h5 {
@@ -927,12 +998,19 @@ header {
 
   .footer > div > h1:nth-child(1) {
     position: relative;
-    left: -90px;
+    left: -30vw;
   }
   
   .footer > div > h1:nth-child(2) {
     position: relative;
-    left: -50px;
+    left: -11.4vw;
+  }
+
+  .copyright-group:nth-child(1) > img {
+    width: 15vw;
+  }
+  .copyright-group:nth-child(2) > img {
+    width: 33vw;
   }
   
 }
