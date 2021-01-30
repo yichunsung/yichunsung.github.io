@@ -7,8 +7,9 @@ html {
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
 
 :root {
-  --main-color: #006edc;
+  --main-color: #0074bf;
   --btn: #fff;
+  --font-content-color: #434343;
   --font-roboto: 'Roboto', sans-serif;
   --font-title: 32px;
   --font-h4: 24px;
@@ -20,7 +21,6 @@ html {
 
 header {
   position: absolute;
-  /* border: 1px solid black; */
   width: 70%;
   margin: 0 auto;
   display: flex;
@@ -32,6 +32,7 @@ header {
   transform: translateX(-50%);
   padding: 1vw;
   background-color: rgba(0, 0, 0, 0);
+  color: var(--font-content-color);
 }
 
 .Logo {
@@ -149,6 +150,7 @@ header {
   max-width: 100%;
   background-image: url(./images/enable-background.png);
   background-size: cover;
+  color: var(--font-content-color);
 }
 
 .description > h3 {
@@ -193,7 +195,6 @@ header {
   font-size: var(--font-h4);
   margin: 14px 0;
   color: var(--main-color);
-  font-family: var(--font-roboto);
 }
 
 .item > p {
@@ -201,6 +202,7 @@ header {
   margin: 0 auto;
   font-size: var(--font-medium);
   font-family: var(--font-roboto);
+  color: var(--font-content-color);
   /* text-align: center; */
 }
 
@@ -274,6 +276,7 @@ header {
   padding: 70px 0 120px;
   width: 100vw;
   max-width: 100%;
+  color: var(--font-content-color);
 }
 
 .period > h3 {
@@ -353,6 +356,7 @@ header {
   max-width: 100%;
   background-image: url(./images/mode-background.png);
   background-size: cover;
+  color: var(--font-content-color);
   /* background-repeat: no-repeat; */
 }
 
@@ -423,6 +427,7 @@ header {
   padding: 70px 0;
   width: 100vw;
   max-width: 100%;
+  color: var(--font-content-color);
 }
 
 .rule > h3 {
@@ -598,6 +603,7 @@ header {
   max-width: 100%;
   background-image: url(./images/time-background.png);
   background-size: cover;
+  color: var(--font-content-color);
 }
 
 .time > h3 {
@@ -674,7 +680,10 @@ header {
 .exp-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .card {
@@ -682,45 +691,88 @@ header {
   flex-direction: row;
   justify-content: space-around;
   align-items: flex-start;
-  width: 30%;
+  width: 46%;
+  position: relative;
 }
 
 .card > img {
   border: 10px solid rgb(167, 167, 167);
   margin: 30px 20px;
+  z-index: 0;
+  width: 150px;
+  height: 150px;
 }
 
 .content {
   width: 70%;
   margin: 0 20px;
   font-family: var(--font-roboto);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 210px;
 }
 
 .content > h4 {
   font-size: var(--font-content);
-  font-weight: 300;
+  font-weight: 700;
+  color: var(--main-color);
+  font-size: 24px;
 }
 
-.content > h4 > span {
+.content > p {
   font-size: var(--font-content);
-  font-weight: 300;
-  color: var(--main-color);
+  font-weight: 400;
+  color: var(--font-content-color);
+  font-size: var(--font-medium);
+}
+
+.icon-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.icon-group > a > img {
+  width: 25px;
+  margin: 0 7px 0 0;
 }
 
 @media screen and (max-width: 1440px) {
-  .card {
+  /* .card {
     width: 40%;
+  } */
+
+  .content > h4 {
+    font-size: 1.2vw;
+  }
+  
+  .content > p {
+    font-size: 1vw;
+  }
+
+  .exp-container {
+    width: 80%;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .card > img {
-    border: 8px solid rgb(167, 167, 167);
-    width: 6.5vw;
+    border: 4px solid rgb(167, 167, 167);
+    width: 7.2vw;
+    height: 7.2vw;
+  }
+
+  .content {
+    height: 130px;
   }
 
   .content > h4 {
     font-size: 16px;
+    margin: 21px 0 10px;
+  }
+
+  .exp-container {
+    width: 90%;
   }
 }
 
@@ -740,6 +792,11 @@ header {
   }
   .content > h4 > span {
     font-size: 12px;
+  }
+
+  .icon-group > a > img {
+    width: 1.8vw;
+    margin: 0 7px 0 0;
   }
 }
 
@@ -761,14 +818,15 @@ header {
   }
 
   .card {
-    margin: 0 auto;
+    margin: 1vw auto;
     width: 91.4vw;
   }
 
   .card > img {
-    border: 8px solid rgb(167, 167, 167);
+    border: 6px solid rgb(167, 167, 167);
     margin: 8vw 2.6vw;
     width: 18vw;
+    height: 18vw;
   }
 
   .content {
@@ -779,8 +837,13 @@ header {
     font-size: 4vw;
   }
 
-  .content > h4 > span {
+  .content > p {
     font-size: 4vw;
+  }
+
+  .icon-group > a > img {
+    width: 5vw;
+    margin: 0 7px 0 0;
   }
 }
 
@@ -796,6 +859,7 @@ header {
   background-size: cover;
   position: relative;
   z-index: 0;
+  color: var(--font-content-color);
 }
 
 .enable-yourself > div {
@@ -1067,22 +1131,23 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  color: var(--font-content-color);
 }
 
 .contact-us > div > h3 {
-  font-size: var(--font-title);
+  font-size: 14px;
   margin: 10px 0;
   font-family: var(--font-roboto);
-  color: var(--main-color);
   font-weight: bold;
+  text-align: center;
 }
 
 .contact-us > div > p {
-  font-size: var(--font-medium);
-  margin: 8px 0;
+  font-size: 12px;
+  margin: 12px 0;
   font-family: var(--font-roboto);
-  color: var(--main-color);
   font-weight: bold;
+  text-align: center;
 }
 
 @media (min-width: 375px) and (max-width: 426px) {
@@ -1100,6 +1165,8 @@ header {
 
 footer {
   padding: 40px 0;
+  background-image: url(./images/footer-background.png);
+  background-size: cover;
 }
 
 footer > p {
@@ -1108,7 +1175,7 @@ footer > p {
   font-size: var(--font-medium);
   margin: 8px 0;
   font-family: var(--font-roboto);
-  color: var(--main-color);
+  color: #fff;
   width: 200px;
 }
 

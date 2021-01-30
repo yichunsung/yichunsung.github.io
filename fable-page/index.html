@@ -22,14 +22,6 @@
         <button class="page-btn">現在報名</button>
       </article>
     </div>
-    <!-- <div class="companies">
-        <h3>THE COMPANIES THAT MAKE THEIR LIFE <span>SIMPLE</span></h3>
-        <div class="logos">
-          <h3>
-            Urna sed augue class aptent taciti sociosqu ad litora torquent
-          </h3>
-        </div>
-      </div> -->
     <div class="description">
       <h3>Enable Yourself To Make A Change.</h3>
       <p>
@@ -237,29 +229,7 @@
     </div>
     <div class="experience">
       <h3>講師 / 團隊介紹</h3>
-      <div class="exp-container">
-        <div class="card">
-          <img src="https://fakeimg.pl/80x80/?text=A" />
-          <div class="content">
-            <h4>
-              <span>@IWantSimple </span> A big part of our process is about
-              validation and details, but speed to market is also key. Make it
-              simple!
-            </h4>
-            <h4>@Roy</h4>
-          </div>
-        </div>
-        <div class="card">
-          <img src="https://fakeimg.pl/80x80/?text=A" />
-          <div class="content">
-            <h4>
-              <span>@IWantSimple </span> A big part of our process is about
-              validation and details, but speed to market is also key. Make it
-              simple!
-            </h4>
-            <h4>@Roy</h4>
-          </div>
-        </div>
+      <div class="exp-container" id="exp-container">
       </div>
     </div>
   </div>
@@ -295,8 +265,6 @@
       <p>若有任何問題，歡迎來電來信詢問！</p>
       <p>Enable Yourself</p>
       <p>Mia Li</p>
-    </div>
-    <div>
       <p>mia.li@fable.com.tw</p>
     </div>
   </div>
@@ -306,3 +274,71 @@
 </body>
 
 </html>
+
+<script>
+  const lecturer = [
+    { id: "1", avatar: "./images/lecturer/", title: "TGO保留", name: "TGO保留", facebook: "", linkedin: "" },
+    { id: "2", avatar: "./images/lecturer/", title: "TGO保留", name: "TGO保留", facebook: "", linkedin: "" },
+    { id: "3", avatar: "./images/lecturer/", title: "TGO保留", name: "TGO保留", facebook: "", linkedin: "" },
+    { id: "4", avatar: "./images/lecturer/paul.png", title: "寓意科技 - CEO", name: "施政源 - Paul", facebook: "https://www.facebook.com/paul.shih.5", linkedin: "https://www.linkedin.com/in/paul-shih-01135b6/" },
+    { id: "5", avatar: "./images/lecturer/jacqueline.jpg", title: "Green Tomato - CSO", name: "Jacqueline Chong", facebook: "https://www.facebook.com/jacqueline.chong", linkedin: "https://www.linkedin.com/in/chongjacqueline/" },
+    { id: "6", avatar: "./images/lecturer/", title: "經緯廣告科技 - 副總經理", name: "陳誼峰 - Kash", facebook: "https://www.facebook.com/kashchen1114", linkedin: "https://www.linkedin.com/in/yifungchen/" },
+    { id: "7", avatar: "./images/lecturer/", title: "Polydice (iCook) - Principal Product Manager", name: "Karen Hsieh", facebook: "", linkedin: "https://www.linkedin.com/in/karen-hsieh-b3389051/" },
+    { id: "8", avatar: "./images/lecturer/derek.jpg", title: "寓意科技 - Customer Success Manager", name: "蔡嘉豪 - Derek", facebook: "https://www.facebook.com/chiahao.tsai.18", linkedin: "https://www.linkedin.com/in/derek-tsai-548aa9164/" },
+    { id: "9", avatar: "./images/lecturer/mia.jpg", title: "寓意科技 - Executive Assistant to CEO", name: "李孟萱 - Mia Li", facebook: "https://www.facebook.com/annieleems", linkedin: "https://www.linkedin.com/in/meng-hsuan-li-b617b4110/" },
+    { id: "10", avatar: "./images/lecturer/young.jpg", title: "Commerce Connector  - 資深數據工程師", name: "蔡子揚 - Young", facebook: "https://www.facebook.com/james.tsai.714", linkedin: "https://www.linkedin.com/in/tzu-yang-tsai/" },
+    { id: "11", avatar: "./images/lecturer/gigi.jpg", title: "LINE Bank - Ecosystem team Manager", name: "GiGi Huang", facebook: "https://www.facebook.com/gigi.huang22", linkedin: "https://www.linkedin.com/in/gigihuang/" },
+    { id: "12", avatar: "./images/lecturer/gary.jpg", title: "滴滴出行 - Product Manager", name: "張凱彥 - GARY", facebook: "https://www.facebook.com/profile.php?id=100015203808171", linkedin: "http://linkedin.com/in/kai-yen-chang-aa659a142/" },
+    { id: "13", avatar: "./images/lecturer/bryan.jpg", title: "Data architect", name: "Bryan", facebook: "https://www.facebook.com/bryanyang0528", linkedin: "https://www.linkedin.com/mwlite/in/bryanyang0528/" },
+    { id: "14", avatar: "./images/lecturer/yenting.jpeg", title: "ALPHA Camp - Student Success Manager / Coach", name: "Yenting", facebook: "https://www.facebook.com/theyenting/", linkedin: "https://www.linkedin.com/in/yentingc/" },
+    { id: "15", avatar: "./images/lecturer/steven.jpg", title: "興聯科技 - Software Deveoper", name: "鄭棋文 - Steven", facebook: "https://www.facebook.com/zheng.q.wen.96", linkedin: "https://www.linkedin.com/in/chiwen-cheng/" },
+  ]
+
+  const container = document.getElementsByClassName("exp-container");
+
+  const data = lecturer.map(lec => {
+    // Create Html Element
+    const cardDiv = document.createElement('div');
+    cardDiv.classList.add("card");
+    const cardAvatar = document.createElement('img');
+    cardAvatar.src = `${lec.avatar}`;
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('content');
+    const cardTitle = document.createElement('h4');
+    const cardName = document.createElement('p');
+    const cardIconGroup = document.createElement('div');
+    cardIconGroup.classList.add('icon-group');
+    const cardFacebookIcon = document.createElement('img');
+    cardFacebookIcon.src = "./images/exp-icon-facebook.png";
+    const cardLinkedinIcon = document.createElement('img');
+    cardLinkedinIcon.src = "./images/exp-icon-linkedin.png";
+    const cardFacebookLink = document.createElement('a');
+    cardFacebookLink.target = "_blank";
+    cardFacebookLink.href = `${lec.facebook}`;
+    const cardLinkedinLink = document.createElement('a');
+    cardLinkedinLink.href = `${lec.linkedin}`;
+    cardLinkedinLink.target = "_blank";
+
+    const cardTitleText = document.createTextNode(`${lec.title}`);
+    const cardNameText = document.createTextNode(`${lec.name}`);
+
+    cardTitle.appendChild(cardTitleText);
+    cardName.appendChild(cardNameText);
+
+    cardFacebookLink.appendChild(cardFacebookIcon);
+    cardLinkedinLink.appendChild(cardLinkedinIcon);
+    cardIconGroup.appendChild(cardFacebookLink);
+    cardIconGroup.appendChild(cardLinkedinLink);
+
+    cardContent.appendChild(cardTitle);
+    cardContent.appendChild(cardName);
+    cardContent.appendChild(cardIconGroup);
+
+    cardDiv.appendChild(cardAvatar);
+    cardDiv.appendChild(cardContent);
+
+    document.getElementById('exp-container').appendChild(cardDiv);
+  })
+
+
+</script>
