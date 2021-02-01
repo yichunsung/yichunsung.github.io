@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:image" content="https://s3.ap-northeast-1.amazonaws.com/assets.1on1/pop/85/new_pop_85_2_1612203871509.jpg" />
+  <meta property="og:image" content="https://static.accupass.com/eventbanner/2101310628576016883660.jpg" />
   <meta property="og:title" content="Enable Yourself - fable" />
   <meta property="og:description" content="Enable Yourself是一個為期一年的計畫，目標在協助所有學員懂得在工作中設定問題並且毫無藉口的面對與解決問題。我們不設定Side Project，全部都是On Job Training，我們衷心希望，我們可以打造一個可以讓年輕員工進入職場的一套實務執行的方法論。" />
   <meta data-hid="description" name="description" content="Enable Yourself是一個為期一年的計畫，目標在協助所有學員懂得在工作中設定問題並且毫無藉口的面對與解決問題。我們不設定Side Project，全部都是On Job Training，我們衷心希望，我們可以打造一個可以讓年輕員工進入職場的一套實務執行的方法論。 即日起~2021/02/16 招募期間選定想參加的組別，填寫並繳交報名文件。 若有任何問題，歡迎來電來信詢問！Mia Li mia.li@fable.com.tw © 2021 Fable Enable Yourself">
@@ -29,7 +29,7 @@
         <p>
           Fable之拉丁字源fabula，也就是「小故事」，引申為寓言故事之意。這是Fable成立之本意，希望在較為冰冷的軟體世界，加入多一點的人性元素，讓所有跟我們合作的人才，得到的不只是PM的專業，更是一個可信賴的堅強後盾。
         </p>
-        <button class="page-btn">現在報名</button>
+        <a href="https://www.accupass.com/event/2101310638341465839857" target="_blank"><button class="page-btn">現在報名</button></a>
       </article>
     </div>
     <div class="description">
@@ -249,7 +249,7 @@
       <h1>To Make A Change.</h1>
     </div>
     <img src="./images/footer-image-l.png" alt="">
-    <button>現在報名</button>
+    <button style="cursor: pointer;" onclick="routeToaccupass();">現在報名</button>
   </div>
   <div class="contact-us-company">
     <div class="contact-us">
@@ -352,7 +352,12 @@
     cardDiv.appendChild(cardContent);
 
     document.getElementById('exp-container').appendChild(cardDiv);
-  })
+  });
+
+  function routeToaccupass() {
+    window.open('https://www.accupass.com/event/2101310638341465839857');
+  }
+
 
 
 </script>

@@ -82,6 +82,7 @@ header {
   font-size: 28px;
   border-radius: 8px;
   box-shadow: 4px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .page-btn:hover {
