@@ -623,6 +623,14 @@ header {
   font-weight: bold;
 }
 
+.time-session {
+  font-size: var(--font-content);
+  text-align: center;
+  font-family: var(--font-roboto);
+  font-weight: bold;
+  margin: 16px 0 4px;
+}
+
 .time-container {
   margin: 0 auto;
   display: flex;
@@ -657,6 +665,10 @@ header {
   .time-container > p:nth-child(even) {
     display: none;
   } */
+
+  .time-container {
+    width: 91.4vw;
+  }
 
   .time-container > p {
     margin: 1.6vw 0;
