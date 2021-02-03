@@ -107,6 +107,10 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+  .pageintro {
+    height: 88vh;
+  }
+
   .pageintro > article {
     left: 50%;
     width: 80vw;
