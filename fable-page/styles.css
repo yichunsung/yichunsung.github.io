@@ -704,6 +704,7 @@ header {
   margin: 0 auto;
 }
 
+/*
 .exp-container > .card:nth-child(1) > .content >  .icon-group{
   display: none;
 }
@@ -715,6 +716,7 @@ header {
 .exp-container > .card:nth-child(3) > .content >  .icon-group{
   display: none;
 }
+*/
 
 .card {
   display: flex;
